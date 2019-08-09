@@ -8,11 +8,11 @@ ITEM.healthPoint = 0
 ITEM.medAttr = 0
 
 function ITEM:GetDescription()
-		return L(self.description .. "\n \n 의학 지식:" .. self.medAttr .. "\n 회복력: " .. self.healthPoint)
+	return L(self.description .. "itemMedkitDesc01" .. self.medAttr .. "itemMedkitDesc02" .. self.healthPoint)
 end
 
 ITEM.functions.Apply = {
-	name = "자가 치료하기",
+	name = L"selfheal",
 	icon = "icon16/pill.png",
 	OnRun = function(itemTable)
 		local client = itemTable.player
@@ -24,13 +24,13 @@ ITEM.functions.Apply = {
 			client:SetHealth(math.min(client:Health() + itemTable.healthPoint + int, client:GetMaxHealth()))
 			character:SetAttrib("int", int + 0.2)
 		else
-			client:Notify("당신은 의학에 대해 아는 것이 부족합니다.")
+			client:NotifyLocalized("lackKnowledge")
 			return false
 		end
 	end
 }
 ITEM.functions.Give = {
-	name = "치료하기",
+	name = L"heal",
 	icon = "icon16/pill.png",
 	OnRun = function(itemTable)
 		local client = itemTable.player
@@ -51,11 +51,11 @@ ITEM.functions.Give = {
 				entity:SetHealth(math.min(client:Health() + itemTable.healthPoint + int, entity:GetMaxHealth()))
 				character:SetAttrib("int", int + 0.2)
 			else
-				client:Notify("당신은 의학에 대해 아는 것이 부족합니다.")
+				client:NotifyLocalized("lackKnowledge")
 				return false
 			end
 		else
-			client:Notify("조준점이 적절한 치료 대상을 가리키고 있어야 합니다.")
+			client:NotifyLocalized("cNotValid")
 			return false
 		end
 	end
