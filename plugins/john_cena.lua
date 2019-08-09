@@ -52,7 +52,7 @@ local playerWeight = 70 -- kg
 local offsetWeightObject = playerWeight
 
 function PLUGIN:GetFallDamage(ply, speed)
-	if (ply:GetCharacter():GetAttribute("str", 0)) then
+	if (ply:GetCharacter() and ply:GetCharacter():GetAttribute("str", 0)) then
 		offsetWeightObject = 70 + ply:GetCharacter():GetAttribute("str", 0) * ix.config.Get("strengthMultiplier", 1)
 	end
 	
