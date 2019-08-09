@@ -1,0 +1,62 @@
+ITEM.name = "Medikit"
+ITEM.description = "A Medikit Base."
+ITEM.category = "Medical"
+ITEM.model = "models/Gibs/HGIBS.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.healthPoint = 0
+ITEM.medAttr = 0
+
+function ITEM:GetDescription()
+		return L(self.description .. "\n \n 의학 지식:" .. self.medAttr .. "\n 회복력: " .. self.healthPoint)
+end
+
+ITEM.functions.Apply = {
+	name = "자가 치료하기",
+	icon = "icon16/pill.png",
+	OnRun = function(itemTable)
+		local client = itemTable.player
+		local character = client:GetCharacter()
+		local int = character:GetAttribute("int", 0)
+		if int >= itemTable.medAttr then
+			client:SetNWBool("Bleeding",false)
+			client:SetNetworkedFloat("NextBandageuse", 2 + CurTime())
+			client:SetHealth(math.min(client:Health() + itemTable.healthPoint + int, client:GetMaxHealth()))
+			character:SetAttrib("int", int + 0.2)
+		else
+			client:Notify("당신은 의학에 대해 아는 것이 부족합니다.")
+			return false
+		end
+	end
+}
+ITEM.functions.Give = {
+	name = "치료하기",
+	icon = "icon16/pill.png",
+	OnRun = function(itemTable)
+		local client = itemTable.player
+		local character = client:GetCharacter()
+		local int = character:GetAttribute("int", 0)
+		local data = {}
+			data.start = client:GetShootPos()
+			data.endpos = data.start + client:GetAimVector() * 96
+			data.filter = client
+		local trace = util.TraceLine(data)
+		local entity = trace.Entity
+
+		-- Check if the entity is a valid door.
+		if (IsValid(entity) and entity:IsPlayer()) then
+			if int >= itemTable.medAttr then
+				entity:SetNWBool("Bleeding",false)
+				entity:SetNetworkedFloat("NextBandageuse", 2 + CurTime())
+				entity:SetHealth(math.min(client:Health() + itemTable.healthPoint + int, entity:GetMaxHealth()))
+				character:SetAttrib("int", int + 0.2)
+			else
+				client:Notify("당신은 의학에 대해 아는 것이 부족합니다.")
+				return false
+			end
+		else
+			client:Notify("조준점이 적절한 치료 대상을 가리키고 있어야 합니다.")
+			return false
+		end
+	end
+}
