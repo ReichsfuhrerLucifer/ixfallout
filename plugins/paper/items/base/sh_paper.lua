@@ -1,13 +1,9 @@
 ITEM.name = "Paper Base"
---ITEM.uniqueID = "misc_paper"
 ITEM.model = "models/props_c17/paper01.mdl"
 ITEM.description = "A piece of paper that you can write on.\nPrivate Note: Only you can edit texts.\nPublic Note: Anyone can edit texts."
-ITEM.flag = "v"
-ITEM.price = 1
-ITEM.maxStack = 10
---ITEM.functions = {}
+
 ITEM.functions.Private = {
-	name = "Write (Private)",
+	name = L"writePrivate",
 	icon = "icon16/page_white_paintbrush.png",
 	OnRun = function(item)
 		local client = item.player
@@ -45,8 +41,9 @@ ITEM.functions.Private = {
 		end
 	end
 }
+
 ITEM.functions.Public = {
-	name = "Write (Public)",
+	name = L"writePublic",
 	icon = "icon16/page_white_paint.png",
 	OnRun = function(item)
 		local client = item.player

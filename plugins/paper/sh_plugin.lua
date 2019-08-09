@@ -1,12 +1,10 @@
 PLUGIN.name = "Writing Paper"
-PLUGIN.author = "Black Tea & Frosty"
+PLUGIN.author = "Black Tea, Frosty"
 PLUGIN.description = "Write something on it."
 
 local playerMeta = FindMetaTable("Player")
 
 if SERVER then
-
-
 	netstream.Hook( "ix_SubmitNote", function( client, data )
 		local text = data[1]
 		local ent = data[2]
@@ -52,7 +50,6 @@ if SERVER then
 		local data = {}
 
 		for k, v in pairs(ents.FindByClass("ix_paper")) do
-
 			local frozeCheck = v:GetPhysicsObject():IsMotionEnabled() --checks whether the paper is frozen
 			
 			data[#data + 1] = {
@@ -67,12 +64,9 @@ if SERVER then
 
 		self:SetData(data)
 	end
-	
 end
 
 if CLIENT then
-	
-	
 	function PLUGIN:ShouldDrawTargetEntity(entity)
 		if (entity:GetClass() == "ix_paper") then
 			return true
@@ -182,7 +176,6 @@ if CLIENT then
 		local private = data[3]
 		ix_OpenNote( text, ent, private )
 	end)
-
 end
 
 /*
