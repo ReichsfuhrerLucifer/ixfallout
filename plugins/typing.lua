@@ -2,7 +2,7 @@ local PLUGIN = PLUGIN
 
 PLUGIN.name = "Typing Indicator"
 PLUGIN.description = "Shows an indicator when someone is typing."
-PLUGIN.author = "`impulse"
+PLUGIN.author = "`impulse, ExtReMLapin"
 PLUGIN.animationTime = 0.5
 
 if (CLIENT) then
