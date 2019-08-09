@@ -1,6 +1,6 @@
-ITEM.name = "손전등"
+ITEM.name = "itemFlashlightName"
 ITEM.model = "models/props_combine/breenlight.mdl"
-ITEM.description = "전지가 들어있는 평범한 손전등입니다."
+ITEM.description = "itemFlashlightDesc"
 ITEM.price = 15
 ITEM.flag = "v"
 ITEM.height = 1

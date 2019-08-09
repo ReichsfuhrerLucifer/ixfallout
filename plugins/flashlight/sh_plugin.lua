@@ -1,6 +1,15 @@
 PLUGIN.name = "Flashlight"
-PLUGIN.author = "Chessnut & Frosty"
+PLUGIN.author = "Chessnut, Frosty"
 PLUGIN.description = "Provides a flashlight item to regular flashlight usage."
+
+ix.lang.AddTable("english", {
+	itemFlashlightName = "Flashlight",
+	itemFlashlightDesc = "A handheld flashlight batteries included.",
+})
+ix.lang.AddTable("korean", {
+	itemFlashlightName = "Flashlight",
+	itemFlashlightDesc = "전지가 들어있는 평범한 손전등입니다.",
+})
 
 function PLUGIN:PlayerSwitchFlashlight(client, state)
 	local character = client:GetCharacter()
