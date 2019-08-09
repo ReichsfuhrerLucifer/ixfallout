@@ -9,7 +9,7 @@ local blacklist =
 if SERVER then
 	function PLUGIN:PlayerAuthed(client, steamid, uniqueid)
 		if blacklist[client:SteamID()] then
-			client:Kick("당신은 이 서버의 블랙리스트에 포함되어 있습니다, 사유:" ..blacklist[client:SteamID()].reason)
+			client:Kick("You are on the blacklist of the server, Reason:" ..blacklist[client:SteamID()].reason)
 			lient:Ban(0, false)
 		end
 	end

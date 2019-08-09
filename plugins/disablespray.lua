@@ -1,9 +1,13 @@
 PLUGIN.name = "Disable Spray"
-PLUGIN.author = "Frosty"
+PLUGIN.author = "Pokernut, Frosty"
 PLUGIN.description = "Disables player spray."
 
-if CLIENT then
-	hook.Add( "PlayerBindPress", "DisableSpray", function( ply, bind, pressed )
-		if ( string.find( bind, "impulse 201" )) then return true end
-	end )
+ix.config.Add("disableSpray", ix.type.bool, true, {category = "appearance"})
+
+if ix.config.Get("disableSpray", true) then
+	if CLIENT then
+		hook.Add( "PlayerBindPress", "disableSpray", function( ply, bind, pressed )
+			if ( string.find( bind, "impulse 201" )) then return true end
+		end )
+	end
 end
