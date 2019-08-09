@@ -1,5 +1,5 @@
 PLUGIN.name = "Advertising"
-PLUGIN.author = "AngryBaldMan"
+PLUGIN.author = "AngryBaldMan, Frosty"
 PLUGIN.description = "Adds an advert command."
 
 ix.lang.AddTable("english", {
