@@ -206,7 +206,7 @@ if (SERVER) then
 						end
 					end
 					
-					if item.noDeathDrop != true then
+					if (item.noDeathDrop != true) then
 						if (counter < ix.config.Get("deathItemMaxDrop", 1)) then
 							if math.random(100) < ix.config.Get("deathItemDropChance", 50) then
 								if (ix.config.Get("dropItemsOnDeath")) then
@@ -226,8 +226,8 @@ if (SERVER) then
 			end
 			
 			timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
-				for j, name in pairs( itemNames ) do
-					client:NotifyLocalized( "itemLost", name )
+				for j, name in pairs(itemNames) do
+					client:NotifyLocalized("itemLost", name)
 				end
 			end)
 		end
