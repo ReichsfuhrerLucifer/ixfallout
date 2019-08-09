@@ -1,5 +1,5 @@
 PLUGIN.name = "Miscellaneous"
-PLUGIN.author = "ZeMysticalTaco and Frosty"
+PLUGIN.author = "ZeMysticalTaco, Frosty"
 PLUGIN.description = "Cool things."
 PLUGIN.SaveEnts = PLUGIN.SaveEnts or {}
 --skinny bars are disgusting
