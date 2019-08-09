@@ -8,10 +8,10 @@ ix.config.Add("NPCKillAmount", 10, "How much money a player gets for killing an 
 })
 
 ix.lang.AddTable("english", {
-    NPCMoneyKill = "You have recived %s for killing an NPC.",
+    NPCMoneyKill = "You have recived %s for killing.",
 })
 ix.lang.AddTable("korean", {
-    NPCMoneyKill = "NPC 처치 보상으로 %s을(를) 받았습니다.",
+    NPCMoneyKill = "처치 보상으로 %s을(를) 받았습니다.",
 })
 
 function PLUGIN:OnNPCKilled(victim, ent, weapon)
