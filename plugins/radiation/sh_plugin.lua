@@ -22,11 +22,11 @@ if (CLIENT) then
 		if var < 0.2 then
 			status = ""
 		elseif var < 0.4 then
-			status = "가벼운 방사능 오염"
+			status = L"minorIrradiation"
 		elseif var < 0.6 then
-			status = "심각한 방사능 오염"
+			status = L"criticalIrradiation"
 		elseif var < 1 then
-			status = "치명적인 방사능 오염"
+			status = L"deadlyIrradiation"
 		end
 
 		return var, status
@@ -279,7 +279,7 @@ ix.command.Add("RadAreaRemove", {
 	adminOnly = true,
 	OnRun = function(self, client, arguments)
 		if (client.currentArea) then
-			client:Notify(L"irradiatedAreaRemoved")
+			client:NotifyLocalized("irradiatedAreaRemoved")
 
 			table.remove(PLUGIN.radAreas, client.currentArea)	
 		else
