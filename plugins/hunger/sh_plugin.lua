@@ -1,3 +1,3 @@
 PLUGIN.name = "Hunger+++"
-PLUGIN.author = "LiGyH"
+PLUGIN.author = "LiGyH, Frosty"
 PLUGIN.desc = "Fabricks + hunger."
