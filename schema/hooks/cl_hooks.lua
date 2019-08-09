@@ -49,6 +49,17 @@ function Schema:BuildBusinessMenu(panel)
 	return false
 end
 
+function Schema:ContextMenuOpen()
+	local client = LocalPlayer()
+
+	if(client:IsAdmin()) then
+		return true
+	else
+		return false
+	end
+end
+
+
 netstream.Hook("PlaySound", function(sound)
 	surface.PlaySound(sound)
 end)
