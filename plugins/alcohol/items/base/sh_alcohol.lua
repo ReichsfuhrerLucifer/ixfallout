@@ -9,24 +9,23 @@ ITEM.thirst = 0
 ITEM.radiation = 0
 ITEM.empty = false
 
-ITEM.functions.use = {
-	name  = "마시기",
+ITEM.functions.drink = {
 	icon = "icon16/drink.png",
 	OnRun = function(item)
 		local client = item.player
-		local thirst = item.player:GetCharacter():GetData("thirst", 100)
-		local radiation = item.player:GetCharacter():GetData("radiation", 0)
+		local thirst = client:GetCharacter():GetData("thirst", 100)
+		local radiation = client:GetCharacter():GetData("radiation", 0)
 		
 		if (thirst + item.thirst) >= 100 then
-			item.player:SetThirst(100)
+			client:SetThirst(100)
 		elseif item.thirst > 0 then
-			item.player:SetThirst(thirst + item.thirst)
+			client:SetThirst(thirst + item.thirst)
 		end
 		
 		if (radiation + item.radiation) >= 100 then
-			item.player:SetRadiation(100)
+			client:SetRadiation(100)
 		elseif item.thirst > 0 then
-			item.player:SetRadiation(radiation + item.radiation)
+			client:SetRadiation(radiation + item.radiation)
 		end
 		
 		client:GetCharacter():SetData("drunk", client:GetCharacter():GetData("drunk") + item.force)
@@ -35,7 +34,7 @@ ITEM.functions.use = {
 		hook.Run("Drunk", client)
 		
 		if item.empty then
-			local inv = item.player:GetCharacter():GetInventory()
+			local inv = client:GetCharacter():GetInventory()
 			inv:Add(item.empty)
 		end
 	end

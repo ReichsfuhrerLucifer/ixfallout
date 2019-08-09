@@ -1,6 +1,13 @@
 PLUGIN.name = "Alcohol"
-PLUGIN.author = "AleXXX_007"
+PLUGIN.author = "AleXXX_007, Frosty"
 PLUGIN.description = "Adds alcohol with effects."
+
+ix.lang.AddTable("english", {
+	drink = "Drink",
+})
+ix.lang.AddTable("korean", {
+	drink = "마시기",
+})
 
 function PLUGIN:Drunk(client)
 	local endurance = client:GetCharacter():GetAttribute("end")
