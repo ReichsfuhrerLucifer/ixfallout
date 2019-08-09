@@ -1,6 +1,6 @@
 PLUGIN.name = "Ammo Saver (Fallout RP)"
 PLUGIN.author = "Black Tea and Frosty"
-PLUGIN.desc = "Saves the ammo of a character."
+PLUGIN.description = "Saves the ammo of a character."
 PLUGIN.ammoList = {}
 
 ix.ammo = ix.ammo or {}
