@@ -1,5 +1,5 @@
-FACTION.name = "브라더후드 오브 스틸 아웃캐스트"
-FACTION.description = "브라더후드 오브 스틸로부터 모종의 이유로 떨어져 나온 분파입니다."
+FACTION.name = "factionOutcastName"
+FACTION.description = "factionOutcastDesc"
 FACTION.color = Color(105, 105, 105)
 FACTION.isDefault = false
 FACTION.pay = 5

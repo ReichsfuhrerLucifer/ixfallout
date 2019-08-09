@@ -1,5 +1,5 @@
-FACTION.name = "브라더후드 오브 스틸 (모하비 챕터)"
-FACTION.description = "서부 브라더후드 오브 스틸의 네바다 주 파견 분대입니다."
+FACTION.name = "factionBOSName"
+FACTION.description = "factionBOSDesc"
 FACTION.color = Color(105, 105, 105)
 FACTION.isDefault = false
 FACTION.pay = 5

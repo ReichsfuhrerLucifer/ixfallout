@@ -1,5 +1,5 @@
-FACTION.name = "황무지인"
-FACTION.description = "모하비 황무지와 그곳의 폐허에서 사는 평범한 사람들입니다."
+FACTION.name = "factionWastelanderName"
+FACTION.description = "factionWastelanderDesc"
 FACTION.color = Color(0, 140, 0)
 FACTION.isDefault = true
 FACTION.pay = 6
@@ -35,9 +35,37 @@ function FACTION:OnCharacterCreated(client, character)
 	local inventory = character:GetInventory()
 	
 	inventory:Add("sunsetsarsaparilla", 2)
-	inventory:Add("brahminsteak", 1)
 	inventory:Add("bandage", 1)
-	inventory:Add("money", 3)
+
+	if character:GetAttribute("luck", 0) then
+		local luck = character:GetAttribute("luck", 0)
+		local luckMult = ix.config.Get("luckMultiplier", 1)
+
+		if (luck * luckMult < 10) then
+			inventory:Add("22rifle", 1)
+			inventory:Add("22lr", 2)
+			inventory:Add("geckosteak", 1)
+			inventory:Add("cigarettepack", 1)
+			character:GiveMoney(10)
+		elseif (luck * luckMult < 20) then
+			inventory:Add("9mmpistol", 1)
+			inventory:Add("9mm", 2)
+			inventory:Add("brahminsteak", 1)
+			inventory:Add("money", 1)
+			character:GiveMoney(20)
+		else
+			inventory:Add("laserpistol", 1)
+			inventory:Add("energycell", 2)
+			inventory:Add("cram", 1)
+			character:GiveMoney(30)
+		end
+	else
+		inventory:Add("22rifle", 1)
+		inventory:Add("22lr", 2)
+		inventory:Add("geckosteak", 1)
+		inventory:Add("cigarettepack", 1)
+		character:GiveMoney(10)
+	end
 end
 
 FACTION_WASTELANDER = FACTION.index

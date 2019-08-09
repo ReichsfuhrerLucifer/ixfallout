@@ -2,6 +2,17 @@ LANGUAGE = {
 	-- Schema
 	schemaName = "Fallout RP",
 	schemaDesc = "War, War never changes...",
+	-- Factions
+	factionBOSName = "Brotherhood of Steel (Mojave chapter)",
+	factionBOSDesc = "A chapter of the original Brotherhood of Steel active in the Mojave Wasteland.",
+	factionLegionName = "Caeser's Legion",
+	factionLegionDesc = "An autocratic, traditionalist, imperialistic slaver society and totalitarian dictatorship. Founded in 2247 by Edward Sallow (also known as Caesar) and Joshua Graham, it is based on the ancient Roman Empire. Its legionaries are a well organized, culturally insular fighting force that mainly operate east of the Colorado River and the Grand Canyon, in the former state of Arizona. Ever pushing west, their capital is the city of Flagstaff.",
+	factionNCRName = "New California Republic",
+	factionNCRDesc = "A large, democratic federation of states with a population of well over 700,000[2] based in California, with holdings in Nevada, Mexico (Baja California)[3] and along the Colorado River.\nThe NCR emphasizes and claims to support a myriad of old-world values, such as democracy, personal liberty, and the rule of law. It also strives to restore general order to the wasteland, the improvement and development of infrastructure and economic systems, and a basic common peace between the people.",
+	factionOutcastName = "Brotherhood Outcast",
+	factionOutcastDesc = "The Outcasts attribute their departure to their belief that the Mojave chapter had lost sight of the Brotherhood’s true mission and the original reason for their presence in the Mojave Wasteland: the recovery and preservation of advanced pre-War technology.",
+	factionWastelanderName = "Wastelander",
+	factionWastelanderDesc = "A general term for anyone living in the wasteland who is not affiliated with some group or organization. They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant, and usually hostile wildlife, or roaming raider gangs such as Jackals and Vipers. Most are not hostile at first but will defend themselves if attacked. When that happens, they usually die, quickly.",
 	-- Items
 	itemBOSHolotagName = "Brotherhood of Steel holotag",
 	itemBOSHolotagDesc = "Every member of the Brotherhood of Steel, just like the soldiers of the U.S. Army that they are descended from, wears a set of two holotags around their neck. They contain essential information about the wearer so that their corpse can be identified.",
