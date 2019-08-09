@@ -6,7 +6,9 @@ PLUGIN.desc = "Shows you all bars while content menu is active."
 PLUGIN.wlist = {
 	health = true,
 	stm = true, 
-	hunger = false
+	hunger = true,
+	thirst = true,
+	radiation = true
  }
 
 if CLIENT then
