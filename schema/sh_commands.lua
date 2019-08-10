@@ -46,7 +46,7 @@ do
 				character:SetData("frequency", frequency)
 				itemTable:SetData("frequency", frequency)
 
-				client:Notify(string.format("You have set your radio frequency to %s.", frequency))
+				client:NotifyLocalized("freqSet", frequency)
 			end
 		end
 	end
@@ -85,10 +85,10 @@ ix.command.Add("CharSpawn", {
 		target:Spawn()
 		
 		if client == target then
-            client:Notify("당신은 당신 자신을 부활 지점에 부활시켰습니다.")
+            client:NotifyLocalized("charSpawn01")
         else
-            client:Notify("당신은 "..target:GetName().."님을 부활 지점에 부활시켰습니다.")
-            target:Notify(client:GetName().." 님이 당신을 부활 지점에 부활시켰습니다.")
+            client:NotifyLocalized("charSpawn02", target:GetName()
+            target:NotifyLocalized("charSpawn03", client:GetName())
         end
 	end
 })
@@ -104,10 +104,10 @@ ix.command.Add("Revive", {
 		target:SetPos(pos)
 		
 		if client == target then
-            client:Notify("당신은 당신 자신을 죽은 위치에 부활시켰습니다.")
+            client:NotifyLocalized("revive01")
         else
-            client:Notify("당신은 "..target:GetName().."님을 죽은 위치에 부활시켰습니다.")
-            target:Notify(client:GetName().." 님이 당신을 죽은 위치에 부활시켰습니다.")
+            client:NotifyLocalized("revive02", target:GetName())
+            target:NotifyLocalized("revive03", client:GetName())
         end
 	end
 })

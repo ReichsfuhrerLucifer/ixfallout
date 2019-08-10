@@ -13,9 +13,17 @@ LANGUAGE = {
 	factionOutcastDesc = "브라더후드 오브 스틸 모하비 챕터가 전쟁 전 고급 기술의 수복과 보존이라는 모하비 황무지에서의 본래 목표를 망각했다고 생각하여 그들로부터 갈라져 나온 보수적 분파입니다.",
 	factionWastelanderName = "황무지인",
 	factionWastelanderDesc = "모하비 황무지와 그곳의 폐허에서 사는 평범한 사람들입니다.",
+	-- Commands
+	charSpawn01 = "당신은 당신 자신을 부활 지점에 부활시켰습니다.",
+	charSpawn02 = "당신은 %s님을 부활 지점에 부활시켰습니다.",
+	charSpawn03 = "%s님이 당신을 부활 지점에 부활시켰습니다.",
+	revive01 = "당신은 당신 자신을 죽은 위치에 부활시켰습니다.",
+	revive02 = "당신은 %s님을 죽은 위치에 부활시켰습니다.",
+	revive03 = "%s님이 당신을 죽은 위치에 부활시켰습니다.",
 	-- Radio
 	radioFormat = "%s님의 무전 \"%s\"",
 	radio_eavesdropFormat = "%s님의 무전 \"%s\"",
+	freqSet = "라디오의 주파수를 %s으로 설정했습니다.",
 	-- Items
 	itemBOSHolotagName = "브라더후드 오브 스틸 전자 인식표",
 	itemBOSHolotagDesc = "대전쟁 전 미군처럼, 브라더후드 오브 스틸의 구성원은 모두 군번줄과 두 개의 인식표를 가지고 있습니다. 인식표에는 착용자의 정보가 기록되어 있어 시신을 식별할 수 있도록 합니다.",
