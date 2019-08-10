@@ -50,7 +50,7 @@ end
 do
 	local CLASS = {}
 	CLASS.color = Color(75, 150, 50)
-	CLASS.format = "%s 님의 무전 \"%s\""
+	CLASS.format = "%s says on radio \"%s\""
 
 	function CLASS:CanHear(speaker, listener)
 		local character = listener:GetCharacter()

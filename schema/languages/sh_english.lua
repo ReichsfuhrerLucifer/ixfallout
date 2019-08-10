@@ -13,6 +13,9 @@ LANGUAGE = {
 	factionOutcastDesc = "The Outcasts attribute their departure to their belief that the Mojave chapter had lost sight of the Brotherhood’s true mission and the original reason for their presence in the Mojave Wasteland: the recovery and preservation of advanced pre-War technology.",
 	factionWastelanderName = "Wastelander",
 	factionWastelanderDesc = "A general term for anyone living in the wasteland who is not affiliated with some group or organization. They make a subsistence living off the land, trade with local settlements, and try not to be ravaged by the abundant, and usually hostile wildlife, or roaming raider gangs such as Jackals and Vipers. Most are not hostile at first but will defend themselves if attacked. When that happens, they usually die, quickly.",
+	-- Radio
+	radioFormat = "%s says on radio \"%s\"",
+	radio_eavesdropFormat = "%s says on radio \"%s\"",
 	-- Items
 	itemBOSHolotagName = "Brotherhood of Steel holotag",
 	itemBOSHolotagDesc = "Every member of the Brotherhood of Steel, just like the soldiers of the U.S. Army that they are descended from, wears a set of two holotags around their neck. They contain essential information about the wearer so that their corpse can be identified.",
