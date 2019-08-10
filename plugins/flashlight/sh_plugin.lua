@@ -7,7 +7,7 @@ ix.lang.AddTable("english", {
 	itemFlashlightDesc = "A handheld flashlight batteries included.",
 })
 ix.lang.AddTable("korean", {
-	itemFlashlightName = "Flashlight",
+	itemFlashlightName = "손전등",
 	itemFlashlightDesc = "전지가 들어있는 평범한 손전등입니다.",
 })
 
