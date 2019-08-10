@@ -11,7 +11,7 @@ ix.lang.AddTable("english", {
 	nfInvalidMapEnt = "That is not a valid map entity!",
 })
 ix.lang.AddTable("korean", {
-	cmdMapEntRemove = "맵 엔티티를 영구적으로 제거합니다."
+	cmdMapEntRemove = "맵 엔티티를 영구적으로 제거합니다.",
 	nfMapEntRemoved = "맵 엔티티가 영구적으로 제거되었습니다.",
 	nfInvalidMapEnt = "유효한 맵 엔티티를 지정해 주세요.",
 })

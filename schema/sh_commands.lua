@@ -87,7 +87,7 @@ ix.command.Add("CharSpawn", {
 		if client == target then
             client:NotifyLocalized("charSpawn01")
         else
-            client:NotifyLocalized("charSpawn02", target:GetName()
+            client:NotifyLocalized("charSpawn02", target:GetName())
             target:NotifyLocalized("charSpawn03", client:GetName())
         end
 	end

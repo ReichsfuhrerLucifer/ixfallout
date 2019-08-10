@@ -11,8 +11,7 @@ function ITEM:GetDescription()
 	return L(self.description .. "itemMedkitDesc01" .. self.medAttr .. "itemMedkitDesc02" .. self.healthPoint)
 end
 
-ITEM.functions.Apply = {
-	name = L"selfheal",
+ITEM.functions.selfheal = {
 	icon = "icon16/pill.png",
 	OnRun = function(itemTable)
 		local client = itemTable.player
@@ -29,8 +28,7 @@ ITEM.functions.Apply = {
 		end
 	end
 }
-ITEM.functions.Give = {
-	name = L"heal",
+ITEM.functions.heal = {
 	icon = "icon16/pill.png",
 	OnRun = function(itemTable)
 		local client = itemTable.player

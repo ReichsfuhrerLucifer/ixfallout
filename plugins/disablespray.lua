@@ -2,7 +2,10 @@ PLUGIN.name = "Disable Spray"
 PLUGIN.author = "Pokernut, Frosty"
 PLUGIN.description = "Disables player spray."
 
-ix.config.Add("disableSpray", ix.type.bool, true, {category = "appearance"})
+ix.config.Add("disableSpray", true, "Whether or not player spray is enabled.", nil, {
+	category = "appearance"
+})
+
 
 if ix.config.Get("disableSpray", true) then
 	if CLIENT then

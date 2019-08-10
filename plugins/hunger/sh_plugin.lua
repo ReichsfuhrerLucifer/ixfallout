@@ -4,7 +4,7 @@ Attribution-ShareAlike 4.0 International License.
 Created by LiGyH.
 --]]
 
-LUGIN.name = "Hunger+++ (merged with Survival System)"
+PLUGIN.name = "Hunger+++ (merged with Survival System)"
 PLUGIN.author = "LiGyH, ZeMysticalTaco, Frosty"
 PLUGIN.description = "A survival system consisting of hunger and thirst."
 
