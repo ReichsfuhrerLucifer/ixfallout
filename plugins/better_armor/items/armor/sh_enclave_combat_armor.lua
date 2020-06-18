@@ -1,6 +1,6 @@
 
-ITEM.name = "US Army combat armor"
-ITEM.description = "itemCombatArmorDesc2"
+ITEM.name = "Enclave combat armor"
+ITEM.description = "itemCombatArmorDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.height = 2
 ITEM.width = 2
@@ -17,18 +17,10 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 			1, -- Acid
 			1, -- Explosion
 }
-
-ITEM.newSkin = 3
 ITEM.replacements = {
-	{"neutral/hub", "hub/neutrals"},
-	{"wastelander1_", ""},
-	{"wastelander2_", ""},
-	{"wastelander3_", ""},
-	{"male_", "combat/"},
-	{"01", "combat"},
-	{"05", "combat"},
-	{"09", "combat"},
-	{"ghoul", "combat_ghoul"}
+	{"neutral/hub/wastelander1", "bs/hub/recon"},
+	{"neutral/hub/wastelander2", "bs/hub/recon"},
+	{"neutral/hub/wastelander3", "bs/hub/recon"}
 }
 
 ITEM.maxDurability = 625

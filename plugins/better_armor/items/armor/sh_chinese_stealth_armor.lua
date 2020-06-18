@@ -1,6 +1,6 @@
 
-ITEM.name = "중공군 스텔스 아머"
-ITEM.description = "흑귀 스텔스 아머는 미중 전쟁 당시 알래스카 전선에서 중공군이 미군의 파워 아머에 대항하기 위해서 개발되었습니다."
+ITEM.name = "Chinese stealth armor"
+ITEM.description = "itemChineseStealthArmorDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.height = 2
 ITEM.width = 2

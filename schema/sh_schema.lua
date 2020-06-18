@@ -32,13 +32,37 @@ end
 -----------------------
 ix.currency.Set("","Cap", "Caps")
 
-ix.config.SetDefault("color", Color(205, 133, 63, 255)) -- Amber
+ix.config.SetDefault("color", Color(26, 255, 128, 255))
 -- Color(26, 255, 128, 255) -- Green
+-- Color(205, 133, 63, 255) -- Amber
 ix.config.SetDefault("font", "NanumSquare")
 ix.config.SetDefault("genericFont", "Malgun Gothic")
 
 ix.config.Add("moneyModel", "models/fallout_4/props/bottlecaptin.mdl", "The model of the money when is dropped.", nil, {category = "appearance"})
 ix.config.SetDefault("moneyModel", "models/fallout_4/props/bottlecaptin.mdl")
+
+---------------
+--[[ AMMO ]]--
+---------------
+ix.ammo.Register("12Gauge")
+ix.ammo.Register("20Gauge")
+ix.ammo.Register("5mm")
+ix.ammo.Register("556mm")
+ix.ammo.Register("9mm")
+ix.ammo.Register("10mm")
+ix.ammo.Register("40mmGrenade")
+ix.ammo.Register("308")
+ix.ammo.Register("357Magnum")
+ix.ammo.Register("44Magnum")
+ix.ammo.Register("50MG")
+ix.ammo.Register("ElectronChargePack")
+ix.ammo.Register("EnergyCell")
+ix.ammo.Register("Flamer")
+ix.ammo.Register("MicrofusionCell")
+ix.ammo.Register("MiiNuke")
+ix.ammo.Register("Missile")
+ix.ammo.Register("FragGrenade")
+ix.ammo.Register("22LR")
 
 ---------------
 --[[ FILES ]]--

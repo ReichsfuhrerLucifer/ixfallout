@@ -44,15 +44,7 @@ if (CLIENT) then
 end
 
 function ITEM:OnInstanced(client)
-	local character = client:GetCharacter()
-	local luck = character:GetAttribute("lck", 0)
-	local luckMult = ix.config.Get("luckMultiplier", 1)
-	
-	if luck then
-		self:SetData("Durability", math.Clamp(self.maxDurability * math.Rand(0.5, 0.75) + self.maxDurability / luck * luckMult, 0, self.maxDurability))
-	else
-		self:SetData("Durability", self.maxDurability * math.Rand(0.5, 0.75))
-	end
+	self:SetData("Durability", self.maxDurability * math.Rand(0.5, 0.75))
 end
 
 -- On item is dropped, Remove a weapon from the player and keep the ammo in the item.
@@ -348,7 +340,7 @@ ITEM.functions.Repair = {
 	OnCanRun = function(item)
 		local client = item.player
 		
-		return item:GetData("Durability") < item.maxDurability
+		return item:GetData("Durability", item.maxDurability or 1000) < item.maxDurability
 	end
 }
 		

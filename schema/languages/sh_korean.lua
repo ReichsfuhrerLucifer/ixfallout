@@ -146,15 +146,18 @@ LANGUAGE = {
 	-- Misc
 	voices = "음성 대사",
 
+	["Agility"] = "민첩성",
 	["Intelligence"] = "지능",
 	["Endurance"] = "지구력",
-	["Strength"] = "근력",
+	["Strength"] = "힘",
 	["Dexterity"] = "민첩성",
 	["Stamina"] = "체력",
+	["Luck"] = "행운",
 	["Ammunition"] = "탄약",
 	["Communication"] = "통신",
 	["Medical"] = "의료 물품",
 	["Outfit"] = "착용품",
+	["Clothing"] = "의상",
 	["Illegal"] = "불법 물품",
 	["Consumeable"] = "일용품",
 	["Consumables"] = "일용품",
@@ -270,6 +273,9 @@ LANGUAGE = {
 	acharacters = "계정", 
 	primary = "주무기",
 	sidearm = "보조무기",
+
+	Cap = "병뚜껑",
+	Caps = "병뚜껑",
 
 	[""] = "",
 	Desc = "",

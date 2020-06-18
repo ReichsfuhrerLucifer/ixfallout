@@ -1,6 +1,6 @@
 ITEM.name = "Armor"
 ITEM.description = "An Armor Base."
-ITEM.category = "방어구"
+ITEM.category = "Armor"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.width = 1
 ITEM.armorAmount = 1
@@ -35,9 +35,9 @@ ITEM.bodyGroups = {
 
 function ITEM:GetDescription()
 	if (self.entity) then
-		return L(self.description .. "\n \n 내구도:" .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
+		return (L(self.description) .. L("itemBaseDescDurability") .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
 	else
-        return L(self.description .. "\n \n 내구도:" .. math.floor(self:GetData("Durability", self.maxDurability)) .. " / ".. self.maxDurability .. "\n \n피해 저항: \n  방탄: " .. (self.damage[1]) .. "\n  방검: " .. (self.damage[2]) .. "\n  전격 저항: " .. (self.damage[3]) .. "\n  화염 저항: " .. (self.damage[4]) .. "\n  방사선 피폭 저항: " .. (self.damage[5]) .. "\n  독성 저항: " .. (self.damage[6]) .. "\n  충격 저항: " .. (self.damage[7]))
+        return (L(self.description) .. L("itemBaseDescDurability") .. math.floor(self:GetData("Durability", self.maxDurability)) .. " / ".. self.maxDurability .. L("itemBaseDescBullet") .. (self.damage[1]) .. L("itemBaseDescSlash") .. (self.damage[2]) .. L("itemBaseDescShock") .. (self.damage[3]) .. L("itemBaseDescBurn") .. (self.damage[4]) .. L("itemBaseDescRadiation") .. (self.damage[5]) .. L("itemBaseDescAcid") .. (self.damage[6]) .. L("itemBaseDescExplosive") .. (self.damage[7]))
 	end
 end
 
@@ -133,15 +133,7 @@ function ITEM:RemoveAttachment(id, client)
 end
 
 function ITEM:OnInstanced(client)
-	local character = client:GetCharacter()
-	local luck = character:GetAttribute("lck", 0)
-	local luckMult = ix.config.Get("luckMultiplier", 1)
-	
-	if luck then
-		self:SetData("Durability", math.Clamp(self.maxDurability * math.Rand(0.5, 0.75) + self.maxDurability / luck * luckMult, 0, self.maxDurability))
-	else
-		self:SetData("Durability", self.maxDurability * math.Rand(0.5, 0.75))
-	end
+	self:SetData("Durability", self.maxDurability * math.Rand(0.5, 0.75))
 end
 
 ITEM:Hook("drop", function(item)
@@ -153,7 +145,7 @@ ITEM:Hook("drop", function(item)
 end)
 
 ITEM.functions.EquipUn = { -- sorry, for name order.
-	name = "장착 해제하기",
+	name = "Unequip",
 	tip = "equipTip",
 	icon = "icon16/cross.png",
 	OnRun = function(item)
@@ -177,7 +169,7 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 }
 
 ITEM.functions.Equip = {
-	name = "장착하기",
+	name = "Equip",
 	tip = "equipTip",
 	icon = "icon16/tick.png",
 	OnRun = function(item)
@@ -289,8 +281,7 @@ ITEM.functions.Equip = {
 	end
 }
 
-ITEM.functions.repair = {
-	name = "수리하기",
+ITEM.functions.Repair = {
 	icon = "icon16/bullet_wrench.png",
 	OnRun = function(item)
 		local client = item.player
@@ -319,7 +310,7 @@ ITEM.functions.repair = {
 		local client = item.player
 		
 		return !IsValid(item.entity) and IsValid(client) and
-			item:GetData("Durability") < item.maxDurability and item.invID == client:GetCharacter():GetInventory():GetID()
+			item:GetData("Durability", item.maxDurability or 100) < item.maxDurability and item.invID == client:GetCharacter():GetInventory():GetID()
 	end
 }
 		

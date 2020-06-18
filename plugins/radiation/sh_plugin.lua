@@ -160,58 +160,58 @@ else
 		PLUGIN.radAreas = self:GetData()
 	end
 
-	timer.Create("irradiatedTick", 1, 0, function()
-		for _, client in ipairs(player.GetAll()) do
-			local char = client:GetCharacter()
-			local clientPos = client:GetPos() + client:OBBCenter()
-			client.currentArea = nil
+	if (SERVER) then
+		timer.Create("irradiatedTick", 1, 0, function()
+			for _, client in ipairs(player.GetAll()) do
+				local char = client:GetCharacter()
+				local clientPos = client:GetPos() + client:OBBCenter()
+				client.currentArea = nil
 
-			for index, vec in ipairs((ix.irradiated.GetAll() or {})) do
-				if (clientPos:WithinAABox(vec[1], vec[2])) then
-					if (client:IsAdmin()) then
-						client.currentArea = index
-					end
-					
-					if (client:Alive() and char) then
-						if (client:IsPlayer()) then
-							local character = client:GetCharacter()
-							local inventory = character:GetInventory()
-							local items = inventory:GetItems()
-							
-							for k, v in pairs(items) do
-								if (v:GetData("equip") and client:GetNetVar("resistance") == true) then
-									client:AddRadiation(math.random(1, 2))
-									client:SetRadiation(client:GetRadiation() - client:GetNWFloat("dmg_radiation") * math.random(5, 10) * ix.config.Add("luckMultiplier") * math.max(1, character:GetAttribute("lck", 0) / 6))
-									client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
-								else
-									client:AddRadiation(math.random(1, 2))
-									client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
+				for index, vec in ipairs((ix.irradiated.GetAll() or {})) do
+					if (clientPos:WithinAABox(vec[1], vec[2])) then
+						if (client:IsAdmin()) then
+							client.currentArea = index
+						end
+						
+						if (client:Alive() and char) then
+							if (client:IsPlayer()) then
+								local inventory = char:GetInventory()
+								local items = inventory:GetItems()
+
+								for k, v in pairs(items) do
+									if (v:GetData("equip") == true and v.base == "base_armor") then
+										local durability = v:GetData("Durability", 100)
+						
+										if (durability > 0) then
+											v:SetData("Durability", math.max(durability - 0.1))
+										elseif (durability == 0 or durability < 0) then
+											v:RemoveOutfit(client)
+											v:SetData("Durability", 0)
+										end
+
+										client:AddRadiation(math.random(0, v.damage[5]))
+										client:ScreenFade(1, ColorAlpha(color_white, 5), .5, 0)
+									else
+										client:AddRadiation(math.random(0, 1))
+										client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
+									end
 								end
 							end
-						end
 							
-						local d = DamageInfo()
-						d:SetDamage(math.random(1, 2))
-						d:SetAttacker( client )
-						d:SetDamageType( DMG_RADIATION )
-
-						client:TakeDamageInfo( d )
-						
-						local geigerSounds = {"player/geiger1.wav", "player/geiger2.wav", "player/geiger3.wav" }
-						local randomsound = table.Random(geigerSounds)
-						
-						client:EmitSound(randomsound)
-						
-						break
+							local geigerSounds = {"player/geiger1.wav", "player/geiger2.wav", "player/geiger3.wav" }
+							local randomsound = table.Random(geigerSounds)
+							
+							client:EmitSound(randomsound)
+						end
 					end
 				end
 			end
-		end
-	end)
+		end)
+	end
 
 	netstream.Start("AddArea", function(client, v1, v2)
 		if (!client:IsAdmin()) then
-			client:Notify(L("notAllowed", client))
+			client:NotifyLocalized("notAllowed", client)
 		end
 
 		client:NotifyLocalized("addedNewIrradiated")
@@ -287,25 +287,3 @@ ix.command.Add("RadAreaRemove", {
 		end
 	end
 })
-
-function Schema:EntityTakeDamage( target, dmginfo )
-	if ( target:IsPlayer() ) then
-		if ( target:GetNetVar("resistance") == true ) then
-			if (dmginfo:IsDamageType(DMG_BULLET)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_bullet"))
-			elseif (dmginfo:IsDamageType(DMG_SLASH)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_slash"))
-			elseif (dmginfo:IsDamageType(DMG_SHOCK)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_shock"))
-			elseif (dmginfo:IsDamageType(DMG_BURN)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_burn"))
-			elseif (dmginfo:IsDamageType(DMG_RADIATION)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_radiation"))
-			elseif (dmginfo:IsDamageType(DMG_ACID)) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_acid"))
-			elseif (dmginfo:IsExplosionDamage()) then
-				dmginfo:ScaleDamage(target:GetNWFloat("dmg_explosive"))
-			end
-		end
-	end
-end

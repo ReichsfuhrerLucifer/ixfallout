@@ -1,4 +1,5 @@
 
+local PLUGIN = PLUGIN
 PLUGIN.name = "Ambient Sounds"
 PLUGIN.author = "Black Tea, Frosty"
 PLUGIN.description = "Ambient Sounds"
@@ -24,13 +25,11 @@ if CLIENT then
 				self.sndWind:Play()
 			end
 			self.sndWind:ChangeVolume( .1, 4 )
-			self.sndAmbients:ChangeVolume( 1, 4 )
 		else
 			if !self.sndAmbients:IsPlaying() then
 				self.sndAmbients:Play()
 			end
 			self.sndWind:ChangeVolume( 0, 4 )
-			self.sndAmbients:ChangeVolume( 1, 4 )
 		end
 	end
 end

@@ -1,5 +1,5 @@
 
-ITEM.name = "Radation checker"
+ITEM.name = "Radiation checker"
 ITEM.description = "itemRadcheckerDesc"
 ITEM.price = 150
 ITEM.model = "models/gibs/shield_scanner_gib1.mdl"

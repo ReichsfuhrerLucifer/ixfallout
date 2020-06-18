@@ -1,5 +1,5 @@
-ITEM.name = "위스키"
-ITEM.description = "스코틀랜드에서 유래한 술로 가장 유명한 증류주입니다."
+ITEM.name = "Whiskey"
+ITEM.description = "itemWhiskeyDesc"
 ITEM.model = "models/mosi/fallout4/props/alcohol/whiskey.mdl"
 ITEM.force = 10
 ITEM.thirst = 25

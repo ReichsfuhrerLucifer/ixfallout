@@ -244,8 +244,4 @@ if (SERVER) then
 			client:GetCharacter():UpdateAttrib("str", 0.001)
 		end
 	end
-else
-	ix.bar.Add(function()
-		return LocalPlayer():GetLocalVar("stm", 0) / 100
-	end, Color(200, 200, 40), nil, "stm")
 end

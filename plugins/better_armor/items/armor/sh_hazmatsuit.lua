@@ -13,7 +13,7 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 			1, -- Slash
 			1, -- Shock
 			1, -- Burn
-			0, -- Radiation
+			0.1, -- Radiation
 			1, -- Acid
 			1, -- Explosion
 }
