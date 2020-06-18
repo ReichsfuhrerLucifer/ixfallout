@@ -4,28 +4,37 @@ PLUGIN.description = "An item spawning system."
 PLUGIN.author = "ZeMysticalTaco"
 PLUGIN.spawners = PLUGIN.spawners or {}
 PLUGIN.items = PLUGIN.items or {}
-ix.config.Add("item_spawn_interval", 300, "The font used to display titles.", nil, {
-	category = "Item Spawner",
+
+ix.lang.AddTable("english", {
+	itemspawner = "Item Spawner",
+})
+
+ix.lang.AddTable("korean", {
+	itemspawner = "아이템 스포너",
+})
+
+ix.config.Add("ItemSpawnInterval", 300, "The font used to display titles.", nil, {
+	category = "itemspawner",
 	data = {min = 10, max = 999999999}
 })
 
-ix.config.Add("item_spawn_per_wave", 5, "The font used to display titles.", nil, {
-	category = "Item Spawner",
+ix.config.Add("ItemSpawnPerWave", 5, "The font used to display titles.", nil, {
+	category = "itemspawner",
 	data = {min = 0, max = 1000}
 })
 
-ix.config.Add("item_spawn_max_items", 75, "The font used to display titles.", nil, {
-	category = "Item Spawner",
+ix.config.Add("ItemSpawnMaxItems", 75, "The font used to display titles.", nil, {
+	category = "itemspawner",
 	data = {min = 0, max = 1000}
 })
 
-ix.config.Add("item_minimum_players", 2, "The font used to display titles.", nil, {
-	category = "Item Spawner",
+ix.config.Add("ItemMinimumPlayers", 2, "The font used to display titles.", nil, {
+	category = "itemspawner",
 	data = {min = 0, max = 64}
 })
 
-ix.config.Add("item_max_in_container", 2, "The font used to display titles.", nil, {
-	category = "Item Spawner",
+ix.config.Add("ItemMaxInContainer", 2, "The font used to display titles.", nil, {
+	category = "itemspawner",
 	data = {min = 0, max = 64}
 })
 	ix.command.Add("ItemSpawnAdd", {
@@ -299,10 +308,10 @@ if SERVER then
 	The bread and butter.
 ---------------------------------------------------------------------------]]
 	function PLUGIN:Think()
-		local frequency = ix.config.Get("item_spawn_interval", 300)
-		local waves = ix.config.Get("item_spawn_per_wave", 5)
-		local max_items = ix.config.Get("item_spawn_max_items", 75)
-		local min_players = ix.config.Get("item_minimum_players", 2)
+		local frequency = ix.config.Get("ItemSpawnInterval", 300)
+		local waves = ix.config.Get("ItemSpawnPerWave", 5)
+		local max_items = ix.config.Get("ItemSpawnMaxItems", 75)
+		local min_players = ix.config.Get("ItemMinimumPlayers", 2)
 		if #self.spawners < 1 then return end
 		if not NextItemSpawn or NextItemSpawn <= CurTime() then
 			if #player.GetAll() >= min_players and #ents.FindByClass("ix_item") < max_items then

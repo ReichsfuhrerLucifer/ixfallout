@@ -1,7 +1,7 @@
 --TODO: POPULATE CRAFTING ITEMS AND RECIPES
 PLUGIN.name = "Crafting"
 PLUGIN.author = "ZeMysticalTaco"
-PLUGIN.desc = "Replacing the business menu with crafting because that's a more sensible thing to do."
+PLUGIN.description = "Replacing the business menu with crafting because that's a more sensible thing to do."
 STORED_RECIPES = {}
 
 function PLUGIN:AddRecipe(name, model, desc, requirements, results, id, skill, blueprint, entity, category)

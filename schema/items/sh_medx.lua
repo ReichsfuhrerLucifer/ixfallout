@@ -1,11 +1,10 @@
-ITEM.name = "메드-X"
+ITEM.name = "Med-X"
 ITEM.model = "models/mosi/fallout4/props/aid/medx.mdl"
-ITEM.description = "신체 능력을 비약적으로 향상시켜 고통을 견딜 수 있게 하는 약품입니다.\n40초 간 방어력이 15로 유지됩니다."
+ITEM.description = "itemMedXDesc"
 ITEM.price = 20
 ITEM.category = "Medical"
 
-ITEM.functions.Apply = {
-	name = "복용하기",
+ITEM.functions.Dose = {
 	OnRun = function(item)
 		local client = item.player
 		local armor = client:Armor()
@@ -39,7 +38,7 @@ ITEM.functions.Apply = {
 				client:SetArmor(armor)
 				character:SetAttrib("end", endurance)
 				client:EmitSound("ui/addicteds.wav")
-				client:Notify("메드-X의 효과가 사라졌습니다.")
+				client:NotifyLocalized("itemMedXEffectsEnded")
 			end
 		end)
 	end

@@ -1,6 +1,6 @@
 
-ITEM.name = "NCR 레인저 복장"
-ITEM.description = "NCR 군대의 정예병인 레인저들이 입는 복장입니다."
+ITEM.name = "Ranger casual outfit"
+ITEM.description = "itemNCRRangerCasualDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.width = 2
 ITEM.height = 2

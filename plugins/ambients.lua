@@ -1,15 +1,11 @@
-local PLUGIN = PLUGIN
+
 PLUGIN.name = "Ambient Sounds"
 PLUGIN.author = "Black Tea, Frosty"
 PLUGIN.description = "Ambient Sounds"
 
-PLUGIN.config = {}
-PLUGIN.config.activated = true
-
 if CLIENT then
 
-	PLUGIN.timeData = {
-	}
+	PLUGIN.timeData = {}
 	PLUGIN.sndWind = nil
 	PLUGIN.sndAmbients = nil
 	
@@ -37,5 +33,4 @@ if CLIENT then
 			self.sndAmbients:ChangeVolume( 1, 4 )
 		end
 	end
-	
 end

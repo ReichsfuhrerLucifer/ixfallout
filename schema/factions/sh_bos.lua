@@ -1,4 +1,4 @@
-FACTION.name = "factionBOSName"
+FACTION.name = "Brotherhood of Steel (Mojave chapter)"
 FACTION.description = "factionBOSDesc"
 FACTION.color = Color(105, 105, 105)
 FACTION.isDefault = false

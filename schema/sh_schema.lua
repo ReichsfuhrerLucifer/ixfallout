@@ -1,6 +1,6 @@
 Schema.name = "Fallout RP"
 Schema.author = "Frosty"
-Schema.description = "전쟁, 전쟁은 결코 변하지 않는다..."
+Schema.description = "schemaDesc"
 
 ------------------
 --[[ INCLUDES ]]--
@@ -30,10 +30,11 @@ end
 -----------------------
 --[[ CONFIGURATION ]]--
 -----------------------
-ix.currency.Set("","병뚜껑", "병뚜껑")
+ix.currency.Set("","Cap", "Caps")
 
-ix.config.SetDefault("color", Color(205, 133, 63, 255))
-ix.config.SetDefault("font", "Malgun Gothic")
+ix.config.SetDefault("color", Color(205, 133, 63, 255)) -- Amber
+-- Color(26, 255, 128, 255) -- Green
+ix.config.SetDefault("font", "NanumSquare")
 ix.config.SetDefault("genericFont", "Malgun Gothic")
 
 ix.config.Add("moneyModel", "models/fallout_4/props/bottlecaptin.mdl", "The model of the money when is dropped.", nil, {category = "appearance"})
@@ -46,6 +47,9 @@ if (SERVER) then
 	-- resource.AddWorkshop("891790188") -- Fallout 3 Custom Backpacks
 	-- resource.AddWorkshop("203873185") -- Fallout Collection: Aid Props
 end
+
+ix.flag.Add("x", "Access to the context menu.")
+ix.flag.Add("b", "Access to the bussiness menu.")
 
 do
 	local CLASS = {}
@@ -78,7 +82,7 @@ end
 do
 	local CLASS = {}
 	CLASS.color = Color(255, 255, 175)
-	CLASS.format = "%s 님의 무전 \"%s\""
+	CLASS.format = "%s says on radio \"%s\""
 
 	function CLASS:GetColor(speaker, text)
 		if (LocalPlayer():GetEyeTrace().Entity == speaker) then

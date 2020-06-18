@@ -1,10 +1,10 @@
-ITEM.name = "itemRadawayName"
+ITEM.name = "Radaway"
 ITEM.model = "models/mosi/fallout4/props/aid/radaway.mdl"
 ITEM.description = "itemRadawayDesc"
 ITEM.price = 20
 ITEM.category = "Medical"
 
-ITEM.functions.inject = {
+ITEM.functions.Inject = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()

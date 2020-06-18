@@ -3,11 +3,10 @@ PLUGIN.author = "Chessnut, Frosty"
 PLUGIN.description = "Provides a flashlight item to regular flashlight usage."
 
 ix.lang.AddTable("english", {
-	itemFlashlightName = "Flashlight",
 	itemFlashlightDesc = "A handheld flashlight batteries included.",
 })
 ix.lang.AddTable("korean", {
-	itemFlashlightName = "손전등",
+	["Flashlight"] = "손전등",
 	itemFlashlightDesc = "전지가 들어있는 평범한 손전등입니다.",
 })
 

@@ -1,6 +1,6 @@
 PLUGIN.name = "Show Bars"
 PLUGIN.author = "Neon"
-PLUGIN.desc = "Shows you all bars while content menu is active."
+PLUGIN.description = "Shows you all bars while content menu is active."
 --# Configuration: true - show bar, false - don't show bar.
 -- stm = stamina bar, health = health bar, hunger = hunger bar (only for cookfood plugin)
 PLUGIN.wlist = {

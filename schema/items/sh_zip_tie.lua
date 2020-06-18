@@ -1,6 +1,6 @@
 
-ITEM.name = "수갑"
-ITEM.description = "누군가의 행동을 제한할 때 쓰이는 도구입니다."
+ITEM.name = "Handcuffs"
+ITEM.description = "itemZipTieDesc"
 ITEM.price = 20
 ITEM.model = "models/items/crossbowrounds.mdl"
 -- ITEM.factions = {FACTION_MPF, FACTION_OTA}

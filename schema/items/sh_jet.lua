@@ -1,11 +1,10 @@
-ITEM.name = "제트"
+ITEM.name = "Jet"
 ITEM.model = "models/mosi/fallout4/props/aid/jet.mdl"
-ITEM.description = "뉴 레노의 마이론이라는 자가 만들어 낸 강력한 마약으로 브라민의 배설물을 증류하여 만듭니다.\n스태미너를 즉시 30 회복합니다."
+ITEM.description = "itemJetDesc"
 ITEM.price = 20
 ITEM.category = "Medical"
 
-ITEM.functions.Apply = {
-	name = "흡입하기",
+ITEM.functions.Inhale = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()

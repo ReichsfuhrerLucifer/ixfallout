@@ -3,10 +3,20 @@ PLUGIN.author = "AleXXX_007, Frosty"
 PLUGIN.description = "Adds alcohol with effects."
 
 ix.lang.AddTable("english", {
-	drink = "Drink",
+	itemBeerDesc = "An alcoholic drink brewed from cereal grains—most commonly from malted barley, though wheat, maize (corn), and rice are also used.",
 })
 ix.lang.AddTable("korean", {
-	drink = "마시기",
+	["Alcohol"] = "술",
+	Drink = "마시기",
+	["Beer"] = "맥주",
+	itemBeerDesc = "보리와 같은 곡물을 발효시키고 향신료인 홉을 첨가시켜 맛을 낸 술입니다.",
+	["Bourbon"] = "버본",
+	["Moonshine"] = "밀주",
+	["Nuka-Cola Dark"] = "누카 콜라 다크",
+	["Rum"] = "럼",
+	["Vodka"] = "보드카",
+	["Whiskey"] = "위스키",
+	["Wine"] = "포도주",
 })
 
 function PLUGIN:Drunk(client)

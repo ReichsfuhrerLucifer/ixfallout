@@ -1,4 +1,4 @@
-FACTION.name = "factionNCRName"
+FACTION.name = "New California Republic"
 FACTION.description = "factionNCRDesc"
 FACTION.color = Color(205, 133, 63)
 FACTION.isDefault = false

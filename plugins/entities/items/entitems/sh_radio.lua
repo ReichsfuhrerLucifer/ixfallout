@@ -1,5 +1,5 @@
-ITEM.name = "라디오"
-ITEM.description = "전파를 수신해 라디오 방송을 들을 수 있는 라디오입니다."
+ITEM.name = "Radio"
+ITEM.description = "itemRadioDesc"
 ITEM.entdrop = "fallout_radio"
 ITEM.model = "models/mosi/fallout4/props/radio/radio.mdl"
 ITEM.width = 2

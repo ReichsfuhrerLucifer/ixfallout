@@ -1,4 +1,4 @@
-FACTION.name = "factionLegionName"
+FACTION.name = "Caeser's Legion"
 FACTION.description = "factionLegionDesc"
 FACTION.color = Color(162, 2, 1)
 FACTION.isDefault = false

@@ -1,6 +1,6 @@
 
 function Schema:CanPlayerUseBusiness(client, uniqueID)
-	return false
+	return client:IsAdmin() or client:GetCharacter():HasFlags("b")
 end
 
 function Schema:CanDrive()

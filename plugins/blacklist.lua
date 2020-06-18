@@ -1,3 +1,4 @@
+
 PLUGIN.name = "Blacklist"
 PLUGIN.author = "Dobytchick, Frosty"
 PLUGIN.description = "This plugin dds a blacklist. Do not remove those who are in it, because they can harm your servers"

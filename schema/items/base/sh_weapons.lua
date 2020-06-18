@@ -12,7 +12,7 @@ ITEM.weaponCategory = "sidearm"
 ITEM.maxDurability = 1000
 
 function ITEM:GetDescription()
-	return L(self.description .. "\n \n 내구도:" .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
+	return (self.description .. L("itemBaseDurabilityDesc") .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
 end
 
 -- Inventory drawing
@@ -139,7 +139,7 @@ ITEM.functions.Equip = {
 }
 
 ITEM.functions.use = {
-	name = "부착물 분리하기",
+	name = "Detach",
 	tip = "useTip",
 	icon = "icon16/wrench.png",
 	isMulti = true,
@@ -320,8 +320,7 @@ function ITEM:Unequip(client, bPlaySound, bRemoveItem)
 	end
 end
 
-ITEM.functions.repair = {
-	name = "수리하기",
+ITEM.functions.Repair = {
 	icon = "icon16/bullet_wrench.png",
 	OnRun = function(item)
 		local client = item.player
@@ -334,7 +333,7 @@ ITEM.functions.repair = {
 		local int = character:GetAttribute("int", 0)
 
 		for k, v in pairs(items) do
-			if (v:GetName() == "수리 공구 키트") then
+			if (v:GetName() == "Repair kit") then
 				item:SetData("Durability", math.min(item:GetData("Durability") + item:GetRepairAmount(client), item.maxDurability))
 				character:SetAttrib("int", int + 0.2)
 				client:EmitSound(randomsound)

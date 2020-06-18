@@ -4,12 +4,14 @@ PLUGIN.author = "Valkyrie, blackops7799, Frosty"
 PLUGIN.description = "Renders the characters legs to the local player."
 
 ix.lang.AddTable("english", {
+	legs = "Legs",
 	optLegsEnabled = "Enable legs",
 	optdLegsEnabled = "Enable the rendering of the legs.",
 	optLegsInVehicle = "Enable legs in vehicles",
 	optdLegsInVehicle = "Enable the rendering of the legs in vehicles.",
 })
 ix.lang.AddTable("korean", {
+	legs = "다리",
 	optLegsEnabled = "다리 보기",
 	optdLegsEnabled = "자신의 캐릭터 다리를 내려다볼 수 있도록 합니다.",
 	optLegsInVehicle = "차 안에서 다리 보기",
@@ -18,11 +20,11 @@ ix.lang.AddTable("korean", {
 
 if (CLIENT) then
 	ix.option.Add("legsEnabled", ix.type.bool, true, {
-		category = "appearance"
+		category = "legs"
 	})
 
 	ix.option.Add("legsInVehicle", ix.type.bool, true, {
-		category = "appearance"
+		category = "legs"
 	})
 
 	local Legs = {}

@@ -1,5 +1,5 @@
 
-ITEM.name = "휴대용 무전기"
+ITEM.name = "Handheld Radio"
 ITEM.model = "models/deadbodies/dead_male_civilian_radio.mdl"
 ITEM.width = 1
 ITEM.height = 1
@@ -9,7 +9,7 @@ ITEM.iconCam = {
 	fov = 3.5
 }
 ITEM.exRender = true
-ITEM.description = "주파수 조작 기능이 있는 휴대용 무전기입니다.\n현재 전원은 %s%s 입니다."
+ITEM.description = "itemHandheldRadioDesc"
 ITEM.cost = 150
 -- ITEM.classes = {CLASS_EMP, CLASS_EOW}
 ITEM.flag = "v"
@@ -26,7 +26,7 @@ end
 
 function ITEM:GetDescription()
 	local enabled = self:GetData("enabled")
-	return string.format(self.description, enabled and "on" or "off", enabled and (" 상태이며 주파수는 " .. self:GetData("frequency", "100.0")) or "")
+	return string.format(self.description, enabled and "on" or "off", enabled and (L("itemHandheldRadioDescStatus") .. self:GetData("frequency", "100.0")) or "")
 end
 
 function ITEM.postHooks.drop(item, status)
@@ -42,7 +42,6 @@ ITEM.functions.Frequency = {
 }
 
 ITEM.functions.Toggle = {
-	name = "켜기/끄기",
 	OnRun = function(itemTable)
 		local character = itemTable.player:GetCharacter()
 		local radios = character:GetInventory():GetItemsByUniqueID("handheld_radio", true)

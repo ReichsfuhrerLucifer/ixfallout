@@ -49,7 +49,7 @@ end
 
 function Schema:CanPlayerJoinClass(client, class, info)
 	if (client:IsRestricted()) then
-		client:Notify("You cannot change classes when you are restrained!")
+		client:NotifyLocalized("restrictedClass")
 
 		return false
 	end
@@ -62,7 +62,7 @@ function Schema:PlayerSpawnObject(client)
 end
 
 function Schema:PlayerSpray(client)
-	return false
+	return client:IsAdmin()
 end
 
 netstream.Hook("PlayerFinishChat", function(client, key)

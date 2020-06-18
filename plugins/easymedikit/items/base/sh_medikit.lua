@@ -8,7 +8,7 @@ ITEM.healthPoint = 0
 ITEM.medAttr = 0
 
 function ITEM:GetDescription()
-	return L(self.description .. "\n \n 의학 지식:" .. self.medAttr .. "\n 회복력: " .. self.healthPoint)
+	return (self.description .. L("itemMedkitDesc01") .. self.medAttr .. L("itemMedkitDesc02") .. self.healthPoint)
 end
 
 ITEM.functions.selfheal = {

@@ -1,3 +1,4 @@
+
 PLUGIN.name = "More Hurt Effects"
 PLUGIN.author = "Pokernut, Frosty"
 PLUGIN.description = "Add more hurt effects."

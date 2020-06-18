@@ -1,5 +1,5 @@
 
-ITEM.name = "itemNCRDogtagName"
+ITEM.name = "NCR dogtag"
 ITEM.model = "models/gibs/metal_gib4.mdl"
 ITEM.description = "itemNCRDogtagDesc"
 ITEM.price = 1

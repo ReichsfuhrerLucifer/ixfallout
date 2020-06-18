@@ -6,7 +6,6 @@ ITEM.height = 1
 ITEM.entdrop = ""
 
 ITEM.functions.Use = {
-	name = "Use",
 	icon = "icon16/cursor.png",
 	OnRun = function(item, player, client)
 

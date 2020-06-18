@@ -9,7 +9,7 @@ ITEM.thirst = 0
 ITEM.radiation = 0
 ITEM.empty = false
 
-ITEM.functions.drink = {
+ITEM.functions.Drink = {
 	icon = "icon16/drink.png",
 	OnRun = function(item)
 		local client = item.player

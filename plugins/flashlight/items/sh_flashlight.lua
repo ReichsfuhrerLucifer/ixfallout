@@ -1,4 +1,4 @@
-ITEM.name = "itemFlashlightName"
+ITEM.name = "Flashlight"
 ITEM.model = "models/props_combine/breenlight.mdl"
 ITEM.description = "itemFlashlightDesc"
 ITEM.price = 15

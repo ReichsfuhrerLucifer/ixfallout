@@ -46,13 +46,15 @@ function Schema:ShouldDrawCrosshair()
 end
 
 function Schema:BuildBusinessMenu(panel)
-	return false
+	local client = LocalPlayer()
+
+	return client:IsAdmin() or client:GetCharacter():HasFlags("b")
 end
 
 function Schema:ContextMenuOpen()
 	local client = LocalPlayer()
 
-	if(client:IsAdmin()) then
+	if (client:IsAdmin() or client:GetCharacter():HasFlags("x")) then
 		return true
 	else
 		return false

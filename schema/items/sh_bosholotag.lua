@@ -1,10 +1,10 @@
 
-ITEM.name = "itemBOSHolotagName"
+ITEM.name = "Brotherhood of Steel holotag"
 ITEM.model = "models/gibs/metal_gib4.mdl"
 ITEM.description = "itemBOSHolotagDesc"
 ITEM.price = 1
 
-ITEM.functions.read = {
+ITEM.functions.Read = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()
@@ -15,7 +15,7 @@ ITEM.functions.read = {
 	end
 }
 
-ITEM.functions.set = {
+ITEM.functions.Set = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()

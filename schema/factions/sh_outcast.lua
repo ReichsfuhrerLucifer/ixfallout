@@ -1,4 +1,4 @@
-FACTION.name = "factionOutcastName"
+FACTION.name = "Brotherhood Outcast"
 FACTION.description = "factionOutcastDesc"
 FACTION.color = Color(105, 105, 105)
 FACTION.isDefault = false

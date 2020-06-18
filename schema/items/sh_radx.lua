@@ -1,11 +1,10 @@
-ITEM.name = "라드-X"
+ITEM.name = "Rad-X"
 ITEM.model = "models/mosi/fallout4/props/aid/radx.mdl"
-ITEM.description = "신체의 방사능 저항력을 일정 시간 동안 급격히 향상시키는 약품입니다.\n2분간 방사능 증감 없이 그대로 멈춥니다."
+ITEM.description = "itemRadXDesc"
 ITEM.price = 20
 ITEM.category = "Medical"
 
-ITEM.functions.Apply = {
-	name = "복용하기",
+ITEM.functions.Dose = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()
@@ -26,7 +25,7 @@ ITEM.functions.Apply = {
 		timer.Simple( 121, function()
 			if client and character and client:Alive() then
 				client:EmitSound("ui/addicteds.wav")
-				client:Notify("라드-X의 효과가 사라졌습니다.")
+				client:NotifyLocalized("itemRadXEffectsEnded")
 			end
 		end)
 	end
