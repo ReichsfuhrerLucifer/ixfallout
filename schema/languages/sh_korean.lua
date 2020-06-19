@@ -25,6 +25,7 @@ LANGUAGE = {
 	revive02 = "당신은 %s님을 죽은 위치에 부활시켰습니다.",
 	revive03 = "%s님이 당신을 죽은 위치에 부활시켰습니다.",
 	-- Radio
+	Frequency = "주파수 설정",
 	radioFormat = "%s님의 무전 \"%s\"",
 	radio_eavesdropFormat = "%s님의 무전 \"%s\"",
 	freqSet = "라디오의 주파수를 %s으로 설정했습니다.",

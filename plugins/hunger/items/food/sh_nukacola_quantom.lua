@@ -1,4 +1,4 @@
-ITEM.name = "Nuka-Cola Quantum"
+ITEM.name = "Nuka-Cola Quantom"
 ITEM.model = "models/mosi/fallout4/props/drink/nukacola2.mdl"
 ITEM.description = "itemNukaColaQuantomDesc"
 ITEM.price = 30

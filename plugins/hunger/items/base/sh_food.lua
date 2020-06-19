@@ -16,22 +16,22 @@ ITEM.functions.Eat = {
 		local thirst = character:GetData("thirst", 100)
 		local radiation = character:GetData("radiation", 0)
 		
-		if (hunger + item.hunger) >= 100 then
-			client:SetHunger(100)	
-		elseif item.hunger > 0 then
-			client:SetHunger(hunger + item.hunger)
+		if hunger then
+			if item.hunger then
+				client:SetHunger(math.Clamp(hunger + item.hunger, 0, 100))
+			end
 		end
-		
-		if (thirst + item.thirst) >= 100 then
-			client:SetThirst(100)
-		elseif item.thirst > 0 then
-			client:SetThirst(thirst + item.thirst)
+
+		if thirst then
+			if item.thirst then
+				client:SetThirst(math.Clamp(thirst + item.thirst, 0, 100))
+			end
 		end
-		
-		if (radiation + item.radiation) >= 100 then
-			client:SetRadiation(100)
-		elseif item.radiation > 0 then
-			client:SetRadiation(radiation + item.radiation)
+
+		if radiation then
+			if item.radiation then
+				client:SetRadiation(math.Clamp(radiation + item.radiation, 0, 100))
+			end
 		end
 		
 		if item.empty then

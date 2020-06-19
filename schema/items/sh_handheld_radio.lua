@@ -19,14 +19,14 @@ if (CLIENT) then
 	function ITEM:PaintOver(item, w, h)
 		if (item:GetData("enabled")) then
 			surface.SetDrawColor(110, 255, 110, 100)
-			surface.DrawRect(w - 14, h - 14, 8, 8)
+			surface.DrawRect(w - 14, h - 14, 8, 8)	
 		end
 	end
 end
 
 function ITEM:GetDescription()
 	local enabled = self:GetData("enabled")
-	return string.format(self.description, enabled and "on" or "off", enabled and (L("itemHandheldRadioDescStatus") .. self:GetData("frequency", "100.0")) or "")
+	return L(self.description, enabled and "on" or "off", enabled and (L("itemHandheldRadioDescStatus") .. self:GetData("frequency", "100.0")) or "")
 end
 
 function ITEM.postHooks.drop(item, status)

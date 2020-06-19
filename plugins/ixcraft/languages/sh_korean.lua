@@ -1,5 +1,6 @@
 
 LANGUAGE = {
+	crafting = "제작 및 조리",
 	["CraftMissingFlag"] = "%s 플래그가 없습니다.",
 	["CraftMissingTool"] = "%s이(가) 없습니다.",
 	["CraftMissingItem"] = "%s이(가) 없습니다.",
@@ -12,4 +13,7 @@ LANGUAGE = {
 	["cmdCraftRecipe"] = "제작법 제작을 시도합니다.",
 
 	["noWorkbench"] = "작업대 근처에 있어야 합니다.",
+
+	["Chemistry station"] = "화학 실험대",
+	["Cooking station"] = "조리대",
 }

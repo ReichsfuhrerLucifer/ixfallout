@@ -115,35 +115,6 @@ else
 			
 			damageTime = CurTime() + 15
 		end
-
-		local LocalPlayer() = client
-		local inventory = client:GetCharacter():GetInventory()
-		local items = inventory:GetItems()
-
-		if client:GetNetVar("irradiated", true) then
-			for k, v in pairs(items) do
-				if (v:GetData("equip") == true and v.base == "base_armor") then
-					local durability = v:GetData("Durability", 100)
-
-					if (durability > 0) then
-						v:SetData("Durability", math.max(durability - 0.1))
-					elseif (durability == 0 or durability < 0) then
-						v:RemoveOutfit(client)
-						v:SetData("Durability", 0)
-					end
-
-					client:AddRadiation(math.random(0, v.damage[5]))
-					client:ScreenFade(1, ColorAlpha(color_white, 15), .5, 0)
-				else
-					client:AddRadiation(math.random(0, 1))
-					client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
-				end
-			end
-
-			client:SetNetVar("irradiated", false)
-		else
-			client:SetNetVar("irradiated", false)
-		end
 	end
 	
 	-- IRRADIATED AREA
@@ -203,7 +174,27 @@ else
 					
 					if (client:Alive() and char) then
 						if (client:IsPlayer()) then
-							client:SetNetVar("irradiated", true)
+							local inventory = char:GetInventory()
+							local items = inventory:GetItems()
+
+							for k, v in pairs(items) do
+								if (v:GetData("equip") == true and v.base == "base_armor") then
+									local durability = v:GetData("Durability", 100)
+
+									if (durability > 0) then
+										v:SetData("Durability", math.max(durability - 0.005))
+									elseif (durability == 0 or durability < 0) then
+										client:RemoveOutfit(v)
+										v:SetData("Durability", 0)
+									end
+
+									client:AddRadiation(math.random(0, v.damage[5]/100))
+									-- client:ScreenFade(1, ColorAlpha(color_white, 10), .5, 0)
+								else
+									client:AddRadiation(math.random(0, 0.1))
+									client:ScreenFade(1, ColorAlpha(color_white, 30), .5, 0)
+								end
+							end
 						end
 						
 						local geigerSounds = {"player/geiger1.wav", "player/geiger2.wav", "player/geiger3.wav" }
