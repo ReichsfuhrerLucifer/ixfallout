@@ -1,6 +1,6 @@
 
-ITEM.name = "데저트 레인저 컴뱃 아머"
-ITEM.description = "데저트 레인저들이 입는 컴뱃 아머입니다."
+ITEM.name = "Desert Ranger combat armor"
+ITEM.description = "itemDesertRangerCombatArmorDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.width = 2
 ITEM.armorAmount = 220

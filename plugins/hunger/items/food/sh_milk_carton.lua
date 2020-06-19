@@ -1,11 +1,15 @@
-ITEM.name = "우유"
+ITEM.name = "Brahmin milk"
 ITEM.model = "models/props_junk/garbage_milkcarton001a.mdl"
-ITEM.description = "종이갑에 우유가 들어있습니다."
+ITEM.description = "itemBrahminMilkDesc"
 ITEM.category = "consumables"
-ITEM.hunger = 10
-ITEM.thirst = 70
+ITEM.price = 20
+ITEM.thirst = 10
+ITEM.radiation = -25
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Eat", function(item)
 	local client = item.player
+
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")
+	client:SetHealth(math.min(client:Health() + 5, client:GetMaxHealth()))
+	client:RestoreStamina(10)
 end)

@@ -1,6 +1,6 @@
 
-ITEM.name = "방사능 방호복"
-ITEM.description = "방사능에 오염된 주변 환경으로부터 착용자를 보호합니다."
+ITEM.name = "Hazmat suit"
+ITEM.description = "itemHazmatSuitDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.width = 2
 ITEM.armorAmount = 40

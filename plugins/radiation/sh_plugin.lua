@@ -115,6 +115,35 @@ else
 			
 			damageTime = CurTime() + 15
 		end
+
+		local LocalPlayer() = client
+		local inventory = client:GetCharacter():GetInventory()
+		local items = inventory:GetItems()
+
+		if client:GetNetVar("irradiated", true) then
+			for k, v in pairs(items) do
+				if (v:GetData("equip") == true and v.base == "base_armor") then
+					local durability = v:GetData("Durability", 100)
+
+					if (durability > 0) then
+						v:SetData("Durability", math.max(durability - 0.1))
+					elseif (durability == 0 or durability < 0) then
+						v:RemoveOutfit(client)
+						v:SetData("Durability", 0)
+					end
+
+					client:AddRadiation(math.random(0, v.damage[5]))
+					client:ScreenFade(1, ColorAlpha(color_white, 15), .5, 0)
+				else
+					client:AddRadiation(math.random(0, 1))
+					client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
+				end
+			end
+
+			client:SetNetVar("irradiated", false)
+		else
+			client:SetNetVar("irradiated", false)
+		end
 	end
 	
 	-- IRRADIATED AREA
@@ -160,54 +189,32 @@ else
 		PLUGIN.radAreas = self:GetData()
 	end
 
-	if (SERVER) then
-		timer.Create("irradiatedTick", 1, 0, function()
-			for _, client in ipairs(player.GetAll()) do
-				local char = client:GetCharacter()
-				local clientPos = client:GetPos() + client:OBBCenter()
-				client.currentArea = nil
+	timer.Create("irradiatedTick", 1, 0, function()
+		for _, client in ipairs(player.GetAll()) do
+			local char = client:GetCharacter()
+			local clientPos = client:GetPos() + client:OBBCenter()
+			client.currentArea = nil
 
-				for index, vec in ipairs((ix.irradiated.GetAll() or {})) do
-					if (clientPos:WithinAABox(vec[1], vec[2])) then
-						if (client:IsAdmin()) then
-							client.currentArea = index
+			for index, vec in ipairs((ix.irradiated.GetAll() or {})) do
+				if (clientPos:WithinAABox(vec[1], vec[2])) then
+					if (client:IsAdmin()) then
+						client.currentArea = index
+					end
+					
+					if (client:Alive() and char) then
+						if (client:IsPlayer()) then
+							client:SetNetVar("irradiated", true)
 						end
 						
-						if (client:Alive() and char) then
-							if (client:IsPlayer()) then
-								local inventory = char:GetInventory()
-								local items = inventory:GetItems()
-
-								for k, v in pairs(items) do
-									if (v:GetData("equip") == true and v.base == "base_armor") then
-										local durability = v:GetData("Durability", 100)
+						local geigerSounds = {"player/geiger1.wav", "player/geiger2.wav", "player/geiger3.wav" }
+						local randomsound = table.Random(geigerSounds)
 						
-										if (durability > 0) then
-											v:SetData("Durability", math.max(durability - 0.1))
-										elseif (durability == 0 or durability < 0) then
-											v:RemoveOutfit(client)
-											v:SetData("Durability", 0)
-										end
-
-										client:AddRadiation(math.random(0, v.damage[5]))
-										client:ScreenFade(1, ColorAlpha(color_white, 5), .5, 0)
-									else
-										client:AddRadiation(math.random(0, 1))
-										client:ScreenFade(1, ColorAlpha(color_white, 150), .5, 0)
-									end
-								end
-							end
-							
-							local geigerSounds = {"player/geiger1.wav", "player/geiger2.wav", "player/geiger3.wav" }
-							local randomsound = table.Random(geigerSounds)
-							
-							client:EmitSound(randomsound)
-						end
+						client:EmitSound(randomsound)
 					end
 				end
 			end
-		end)
-	end
+		end
+	end)
 
 	netstream.Start("AddArea", function(client, v1, v2)
 		if (!client:IsAdmin()) then

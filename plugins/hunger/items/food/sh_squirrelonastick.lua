@@ -1,12 +1,11 @@
-ITEM.name = "다람쥐 꼬치구이"
+ITEM.name = "Squirrel on a stick"
 ITEM.model = "models/mosi/fallout4/props/food/squirrelonastick.mdl"
-ITEM.description = "다람쥐 고기를 꼬치에 꽂아 조리한 음식입니다."
+ITEM.description = "itemSquirrelOnAStickDesc"
 ITEM.price = 5
 ITEM.hunger = 75
 ITEM.radiation = 3
-ITEM.category = "consumables"
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")

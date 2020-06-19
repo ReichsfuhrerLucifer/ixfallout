@@ -1,6 +1,6 @@
 
-ITEM.name = "가죽 갑옷"
-ITEM.description = "가죽을 무두질해 만든 갑옷입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다."
+ITEM.name = "Leather armor"
+ITEM.description = "itemLeatherArmorDesc2"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.height = 2
 ITEM.width = 2

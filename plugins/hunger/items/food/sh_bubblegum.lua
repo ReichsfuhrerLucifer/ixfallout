@@ -1,11 +1,10 @@
-ITEM.name = "풍선껌"
+ITEM.name = "Bubblegum"
 ITEM.model = "models/mosi/fallout4/props/food/bubblegum.mdl"
-ITEM.description = "씹으면 단 맛이 나는 풍선껌입니다."
+ITEM.description = "itemBubblegumDesc"
 ITEM.price = 1
 ITEM.radiation = 1
-ITEM.category = "consumables"
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")
