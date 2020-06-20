@@ -5,7 +5,7 @@ ITEM.force = 10
 ITEM.thirst = 25
 ITEM.price = 7
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Drink", function(item)
 	local client = item.player
 	
 	client:EmitSound("ui/drink.wav")

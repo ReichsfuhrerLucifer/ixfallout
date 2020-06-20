@@ -1,12 +1,11 @@
-ITEM.name = "라드스콜피온 고기"
+ITEM.name = "Radscorpion meat"
 ITEM.model = "models/mosi/fallout4/props/food/radscorpionmeat.mdl"
-ITEM.description = "황무지에서 흔하게 볼 수 있는 생물인 라드스콜피온의 고기입니다."
+ITEM.description = "itemRadscorpionMeatDesc"
 ITEM.price = 55
 ITEM.hunger = 75
 ITEM.radiation = 13
-ITEM.category = "consumables"
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")

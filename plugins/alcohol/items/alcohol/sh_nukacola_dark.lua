@@ -5,9 +5,8 @@ ITEM.description = "itemNukaColaDarkDesc"
 ITEM.price = 50
 ITEM.force = 35
 ITEM.thirst = 10
-ITEM.category = "consumables"
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Drink", function(item)
 	local client = item.player
 	
 	client:EmitSound("ui/drink.wav")

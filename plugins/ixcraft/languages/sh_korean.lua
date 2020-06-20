@@ -10,7 +10,7 @@ LANGUAGE = {
 	["CraftRequirements"] = "재료",
 	["CraftResults"] = "결과",
 
-	["cmdCraftRecipe"] = "제작법 제작을 시도합니다.",
+	["cmdCraftRecipe"] = "제작법을 따라 제작을 시도합니다.",
 
 	["noWorkbench"] = "작업대 근처에 있어야 합니다.",
 

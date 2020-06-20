@@ -18,6 +18,7 @@ ix.lang.AddTable("english", {
 	itemCombatArmorDesc2 = "An armor modeled after the human silhouette, combat armors were designed to provide balanced protection without limiting user mobility.\nFemale chracters can't equip this armor.\nTo change character's skin color, contact to the server admins.",
 	itemChineseStealthArmorDesc = "Hēi Guǐ (黑鬼) stealth armor (lit. Black Ghost stealth armor), was developed on the Alaskan front during the Sino-American War by Chinese army to counter the U.S. Army's power armour.",
 	itemCombatArmorReinforcedDesc2 = "An armor modeled after the human silhouette, combat armors were designed to provide balanced protection without limiting user mobility.\nThis model is more protective than the previous one and has a tactical visor attached to the bulletproof helmet.\nFemale chracters can't equip this armor.\nTo change character's skin color, contact to the server admins.",
+	itemMercAdventurerOutfitDesc = "Dress of mercenary explorers roaming the Mojave wilderness.\nTo change character's skin color, contact to the server admins.",
 })
 ix.lang.AddTable("korean", {
 	gasmaskRemoved = "방독면 착용을 해제했습니다.",
@@ -50,6 +51,8 @@ ix.lang.AddTable("korean", {
 	itemLeatherArmorDesc2 = "가죽을 무두질해 만든 갑옷입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다.",
 	["Leather armor, reinforced"] = "강화 가죽 갑옷",
 	itemLeatherArmorReinforcedDesc2 = "가죽을 무두질해 만든 질긴 갑옷입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다.",
+	["Merc adventurer outfit"] = "용병 탐험가 복장",
+	itemMercAdventurerOutfitDesc = "모하비 황무지를 돌아다니는 용병 탐험가의 복장입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다.",
 })
 
 ix.util.Include("cl_plugin.lua")

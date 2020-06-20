@@ -1,9 +1,10 @@
 
 RECIPE.name = "Deathclaw omelette"
-RECIPE.description = "Cook a Deathclaw omelette."
+RECIPE.description = "recipeDeathclawOmeletteDesc"
 RECIPE.model = "models/mosi/fallout4/props/food/deathclawomelette.mdl"
 RECIPE.requirements = {
-	["deathclawegg"] = 1
+	["deathclawegg"] = 1,
+	["bloodpack"] = 1
 }
 RECIPE.results = {
 	["deathclawomelette"] = 1

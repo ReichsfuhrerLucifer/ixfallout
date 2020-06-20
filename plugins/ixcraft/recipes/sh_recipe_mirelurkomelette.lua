@@ -1,9 +1,10 @@
 
 RECIPE.name = "Mireluck omelette"
-RECIPE.description = "Cook a Mireluck omelette."
+RECIPE.description = "recipeMirelurkOmeletteDesc"
 RECIPE.model = "models/mosi/fallout4/props/food/mirelurkomelette.mdl"
 RECIPE.requirements = {
-	["mirelurkegg"] = 1
+	["mirelurkegg"] = 1,
+	["dirtywater"] = 1
 }
 RECIPE.results = {
 	["mirelurkomelette"] = 1

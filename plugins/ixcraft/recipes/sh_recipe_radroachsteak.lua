@@ -3,7 +3,7 @@ RECIPE.name = "Radroach Steak"
 RECIPE.description = "Cook a Radroach steak."
 RECIPE.model = "models/mosi/fallout4/props/food/radroachsteak.mdl"
 RECIPE.requirements = {
-	["radroachmeat"] = 1
+	["radroachmeat"] = 3
 }
 RECIPE.results = {
 	["radroachsteak"] = 1

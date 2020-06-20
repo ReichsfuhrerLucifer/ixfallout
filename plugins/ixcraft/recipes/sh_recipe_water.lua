@@ -1,6 +1,6 @@
 
 RECIPE.name = "Water"
-RECIPE.description = "Purify a water."
+RECIPE.description = "recipeWaterDesc"
 RECIPE.model = "models/mosi/fallout4/props/drink/water.mdl"
 RECIPE.requirements = {
 	["dirtywater"] = 3
@@ -10,7 +10,7 @@ RECIPE.results = {
 }
 
 RECIPE:PostHook("OnCanCraft", function(recipeTable, client)
-	for _, v in pairs(ents.FindByClass("ix_station_chemistrystation")) do
+	for _, v in pairs(ents.FindByClass("ix_station_cookingstation")) do
 		if (client:GetPos():DistToSqr(v:GetPos()) < 100 * 100) then
 			return true
 		end

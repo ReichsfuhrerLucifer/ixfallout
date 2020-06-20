@@ -1,6 +1,6 @@
 
-ITEM.name = "용병 탐험가 복장"
-ITEM.description = "모하비 황무지를 돌아다니는 용병 탐험가의 복장입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다."
+ITEM.name = "Merc adventurer outfit"
+ITEM.description = "itemMercAdventurerOutfitDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.height = 2
 ITEM.width = 2

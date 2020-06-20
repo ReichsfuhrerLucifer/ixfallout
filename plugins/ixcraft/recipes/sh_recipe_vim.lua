@@ -1,18 +1,15 @@
 
-RECIPE.name = "Watermelon"
-RECIPE.description = "Craft a watermelon."
-RECIPE.model = "models/props_junk/watermelon01.mdl"
-RECIPE.category = "Watermelon"
+RECIPE.name = "Vim"
+RECIPE.description = "recipeVimDesc"
+RECIPE.model = "models/mosi/fallout4/props/drink/vim.mdl"
 RECIPE.requirements = {
+	["corn"] = 1,
+	["mutfruit"] = 1,
 	["water"] = 1
 }
 RECIPE.results = {
-	["melon"] = 1
+	["vim"] = 1
 }
-RECIPE.tools = {
-	"cid"
-}
-RECIPE.flag = "V"
 
 RECIPE:PostHook("OnCanCraft", function(recipeTable, client)
 	for _, v in pairs(ents.FindByClass("ix_station_cookingstation")) do
@@ -21,5 +18,5 @@ RECIPE:PostHook("OnCanCraft", function(recipeTable, client)
 		end
 	end
 
-	return false, "You need to be near a workbench."
+	return false, L("noWorkbench")
 end)

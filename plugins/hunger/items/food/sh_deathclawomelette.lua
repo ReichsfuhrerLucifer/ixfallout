@@ -1,11 +1,10 @@
-ITEM.name = "데스클로 오믈렛"
+ITEM.name = "Deathclaw omelette"
 ITEM.model = "models/mosi/fallout4/props/food/deathclawomelette.mdl"
-ITEM.description = "황무지에서 가장 흉포한 생물 중 하나인 데스클로의 알로 만든 오믈렛입니다."
+ITEM.description = "itemDeathclawOmelette"
 ITEM.price = 100
 ITEM.hunger = 100
-ITEM.category = "consumables"
 
-ITEM:Hook("eat", function(item)
+ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")
