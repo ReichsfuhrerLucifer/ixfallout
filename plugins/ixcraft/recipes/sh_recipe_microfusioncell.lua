@@ -1,7 +1,7 @@
 
-RECIPE.name = "Mircrofusion cell"
+RECIPE.name = "Microfusion cell"
 RECIPE.description = "recipeMicrofusionCellDesc"
-RECIPE.model = "models/mosi/fallout4/props/ammo/microfusioncell.mdl"
+RECIPE.model = "models/mosi/fallout4/ammo/microfusioncell.mdl"
 RECIPE.requirements = {
 	["energycell"] = 1
 }
