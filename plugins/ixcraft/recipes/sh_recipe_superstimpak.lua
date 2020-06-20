@@ -1,7 +1,7 @@
 
 RECIPE.name = "Super stimpak"
 RECIPE.description = "Make a super stimpak."
-RECIPE.model = "models/mosi/fallout4/props/aid/stimpak.mdl"
+RECIPE.model = "models/fallout_4/props/superstimpak.mdl"
 RECIPE.requirements = {
 	["stimpak"] = 1,
 	["nukacola"] = 1,
