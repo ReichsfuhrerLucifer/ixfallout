@@ -1,5 +1,5 @@
-ITEM.name = "T-51b power armor"
-ITEM.description = "itemT51BPowerArmorDesc"
+ITEM.name = "Enclave power armor"
+ITEM.description = "itemEnclavePowerArmorDesc"
 ITEM.model = "models/mosi/fallout4/props/fortifications/vaultcrate04.mdl"
 ITEM.width = 3
 ITEM.height = 2
@@ -11,38 +11,38 @@ ITEM.iconCam = {
 ITEM.exRender = true
 -- ITEM.armorAmount = 225
 -- ITEM.price = 7200
-ITEM.price = 1120
+ITEM.price = 890
 ITEM.gasmask = false -- It will protect you from bad air
 ITEM.resistance = true -- This will activate the protection bellow
 ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80.
-			0.4, -- Bullets
-			0.4, -- Slash
-			0.4, -- Shock
-			0.4, -- Burn
-			0.68, -- Radiation
+			0.51, -- Bullets
+			0.51, -- Slash
+			0.51, -- Shock
+			0.51, -- Burn
+			0.8, -- Radiation
 			1, -- Acid
-			0.4, -- Explosion
+			0.51, -- Explosion
 }
-ITEM.replacements = "models/fallout_3/t51b.mdl"
+ITEM.replacements = "models/player/enclave/hub/enclave_trooper.mdl"
 
-ITEM.maxDurability = 2100
+ITEM.maxDurability = 1275
 
 ITEM:Hook("Equip", function(item)
 	local client = item.player
 	local char = client:GetCharacter()
 	local str = char:GetAttribute("str", 0)
-	local endurance = char:GetAttribute("end", 0)
+	local stm = char:GetAttribute("stm", 0)
 	
 	char:SetAttrib("str", math.max(str + 1, 0))
-	char:SetAttribute("end", math.max(endurance + 1, 0))
+	char:SetAttrib("stm", math.max(stm - 1, 0))
 end)
 
 ITEM:Hook("EquipUn", function(item)
 	local client = item.player
 	local char = client:GetCharacter()
 	local str = char:GetAttribute("str", 0)
-	local endurance = char:GetAttribute("end", 0)
+	local stm = char:GetAttribute("stm", 0)
 	
 	char:SetAttrib("str", math.max(str - 1, 0))
-	char:SetAttribute("end", math.max(endurance - 1, 0))
+	char:SetAttrib("stm", math.max(stm + 1, 0))
 end)

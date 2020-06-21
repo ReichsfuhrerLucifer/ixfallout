@@ -2,7 +2,9 @@
 Created with buu342s Swep Creator
 ---------------------------------*/
 
-SWEP.PrintName = "Mysterious Stranger's .44 Magnum"
+if CLIENT then
+SWEP.PrintName = L"Mysterious Stranger's .44 Magnum"
+end
     
 SWEP.Author = "Karltroid51"
 SWEP.Contact = ""

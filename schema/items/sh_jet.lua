@@ -8,6 +8,7 @@ ITEM.functions.Inhale = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()
+		local int = character:GetAttribute("int", 0)
 		local stm = character:GetAttribute("stm", 0)
 		local endurance = character:GetAttribute("end", 0)
 			

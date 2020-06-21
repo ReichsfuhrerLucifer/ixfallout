@@ -23,22 +23,26 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 			1, -- Acid
 			0.31, -- Explosion
 }
-ITEM.replacements = "models/adi/t601_losthills_pm.mdl"
+ITEM.replacements = "models/adi/t601_lyonspride_pm.mdl"
 
 ITEM.maxDurability = 2430
 
 ITEM:Hook("Equip", function(item)
 	local client = item.player
 	local char = client:GetCharacter()
-	local str = char:GetAttritue("str", 0)
+	local str = char:GetAttribute("str", 0)
 	
-	client:SetAttrib("str", math.max(str + 2, 0))
+	char:SetAttrib("str", math.max(str + 2, 0))
+
+	-- client:SetModelScale(client:GetModelScale() * 1.1, 0)
 end)
 
 ITEM:Hook("EquipUn", function(item)
 	local client = item.player
 	local char = client:GetCharacter()
-	local str = char:GetAttritue("str", 0)
+	local str = char:GetAttribute("str", 0)
 	
-	client:SetAttrib("str", math.max(str - 2, 0))
+	char:SetAttrib("str", math.max(str - 2, 0))
+
+	-- client:SetModelScale(1, 0)
 end)

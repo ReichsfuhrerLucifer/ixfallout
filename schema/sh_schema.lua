@@ -14,7 +14,7 @@ ix.util.IncludeDir("hooks")
 ------------------
 --[[ ANIMATION ]]--
 ------------------
-ix.anim.SetModelClass("models/adi/t601_losthills_pm.mdl", "player")
+ix.anim.SetModelClass("models/adi/t601_lyonspride_pm.mdl", "player")
 ix.anim.SetModelClass("models/adi/t601_rustvar2_pm.mdl", "player")
 ix.anim.SetModelClass("models/kuma96/hazmatsuit_female/hazmatsuit_female_pm.mdl", "player")
 ix.anim.SetModelClass("models/kuma96/hazmatsuit_male/hazmatsuit_male_pm.mdl", "player")
@@ -38,8 +38,8 @@ ix.config.SetDefault("color", Color(26, 255, 128, 255))
 ix.config.SetDefault("font", "NanumSquare")
 ix.config.SetDefault("genericFont", "Malgun Gothic")
 
-ix.config.Add("moneyModel", "models/fallout_4/props/bottlecaptin.mdl", "The model of the money when is dropped.", nil, {category = "appearance"})
-ix.config.SetDefault("moneyModel", "models/fallout_4/props/bottlecaptin.mdl")
+ix.config.Add("moneyModel", "models/mosi/fallout4/props/caps/bottlecaptin.mdl", "The model of the money when is dropped.", nil, {category = "appearance"})
+ix.config.SetDefault("moneyModel", "models/mosi/fallout4/props/caps/bottlecaptin.mdl")
 
 ---------------
 --[[ AMMO ]]--

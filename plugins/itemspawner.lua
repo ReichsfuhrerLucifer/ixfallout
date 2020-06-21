@@ -320,7 +320,7 @@ if SERVER then
 					local spawned = self:SpawnRandomItemSafe()
 
 					if spawned then
-						print("Spawned Item.")
+						print("Item spawner(s) spawned item(s).")
 					end
 				end
 

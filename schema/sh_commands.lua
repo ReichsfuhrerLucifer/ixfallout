@@ -111,3 +111,14 @@ ix.command.Add("Revive", {
         end
 	end
 })
+
+ix.command.Add("CharSetScale", {
+	adminOnly = true,
+	arguments = {
+		ix.type.player,
+		ix.type.number
+	},
+	OnRun = function(self, client, target, scale)
+		target:SetModelScale(scale, 0)
+	end
+})

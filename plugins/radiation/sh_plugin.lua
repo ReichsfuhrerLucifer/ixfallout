@@ -188,10 +188,10 @@ else
 										v:SetData("Durability", 0)
 									end
 
-									client:AddRadiation(math.random(0, v.damage[5]/100))
+									client:AddRadiation(math.random(0, v.damage[5]/500))
 									-- client:ScreenFade(1, ColorAlpha(color_white, 10), .5, 0)
 								else
-									client:AddRadiation(math.random(0, 0.1))
+									client:AddRadiation(math.random(0, 0.01))
 									client:ScreenFade(1, ColorAlpha(color_white, 30), .5, 0)
 								end
 							end

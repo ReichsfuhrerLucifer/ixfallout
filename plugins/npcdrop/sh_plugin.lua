@@ -78,8 +78,8 @@ function PLUGIN:OnNPCKilled(entity, client)
 		ix.item.Spawn(DeathclawItems, entity:GetPos() + Vector(0, 0, 16))
 		ix.item.Spawn("deathclawegg", entity:GetPos() + Vector(0, 0, 16))
 	elseif (class == "npc_ghoulferal" or class == "npc_ghoulferal_jumpsuit" or class == "npc_ghoulferal_reaver" or class == "npc_ghoulferal_roamer" or class == "npc_ghoulferal_trooper" or class == "npc_ghoulferal_trooper_gl" or class == "npc_ghoulferal_glowingone" or class == "npc_ghoulferal_jumpsuit_gl") then
-		if (rnd >= 90) then
-			ix.item.Spawn("combat_armor", entity:GetPos() + Vector(0, 0, 16))
+		if (rnd >= 99) then
+			ix.item.Spawn("metal_armor", entity:GetPos() + Vector(0, 0, 16))
 		elseif (rnd >= 30) then
 			ix.item.Spawn(GhoulItems, entity:GetPos() + Vector(0, 0, 16))
 			ix.item.Spawn(IrradiatedPreWarFoodsItems, entity:GetPos() + Vector(0, 0, 16))

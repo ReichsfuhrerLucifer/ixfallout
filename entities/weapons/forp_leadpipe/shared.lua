@@ -1,9 +1,11 @@
 SWEP.Base = "sword_swepbase"
 
+if CLIENT then
 SWEP.PrintName = "Lead pipe"
+SWEP.Instructions = "Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
+end
 SWEP.Category = "Fallout RP"
 SWEP.Author = "Barata"
-SWEP.Instructions = "Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
 SWEP.Purpose = ""
 
 SWEP.AdminSpawnable = true

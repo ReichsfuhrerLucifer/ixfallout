@@ -27,6 +27,7 @@ ix.lang.AddTable("english", {
 	itemT51BPowerArmorDesc = "It represented the peak of armored infantry technology before the Great War. Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments.\nIt is painted for Brotherhood of Steel.",
 	itemT60PowerArmorDesc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 as the pinnacle of powered armor technology in the U.S. military arsenal. The T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs.",
 	itemT60PowerArmorBOSDesc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 as the pinnacle of powered armor technology in the U.S. military arsenal. The T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs.\nIt is painted for Brotherhood of Steel.",
+	itemEnclavePowerArmorDesc = "The advanced power armor Mk II, often simply called Enclave power armor and nicknamed Black Devil armor by Brotherhood paladins is a high-end model of power armor used exclusively by the Enclave's Department of the Army and developed after the Great War and the destruction of the Enclave Oil Rig in 2241. It is composed entirely of lightweight composites rather than the usual combination of metal and composite plates found on the previous designation of advanced power armor, the MK I.",
 })
 ix.lang.AddTable("korean", {
 	gasmaskRemoved = "방독면 착용을 해제했습니다.",
@@ -76,6 +77,8 @@ ix.lang.AddTable("korean", {
 	itemT60PowerArmorDesc = "앵커리지 전투 이후부터 배치되기 시작한 파워 아머로, T-45 파워 아머의 설계를 기반으로 하고 있어 쉽게 개수가 가능합니다.",
 	["Brotherhodo T-60a power armor"] = "브라더후드 T-60a 파워 아머",
 	itemT60PowerArmorBOSDesc = "앵커리지 전투 이후부터 배치되기 시작한 파워 아머로, T-45 파워 아머의 설계를 기반으로 하고 있어 쉽게 개수가 가능합니다.\n브라더후드 오브 스틸 도색이 되어 있습니다.",
+	["Enclave power armor"] = "엔클레이브 파워 아머",
+	itemEnclavePowerArmorDesc = "흔히 엔클레이브 파워 아머로 불리는 어드밴스드 파워 아머 마크 2는 브라더후드 팔라딘들에 의해 검은 악마 아머라는 별명이 붙여진 고급 파워 아머로, 엔클레이브 육군성에서 독점적으로 사용했으며, 2241년 대전과 엔클레이브 정유시설 파괴 이후 개발되었습니다다. 기존의 첨단 파워아머인 마크 1에서 발견된 금속판과 복합판의 일반적인 조합이 아닌 경량 복합재로 전체적으로 구성되어 있습니다.",
 })
 
 ix.util.Include("cl_plugin.lua")

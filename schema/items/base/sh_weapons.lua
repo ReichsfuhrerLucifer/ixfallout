@@ -12,7 +12,7 @@ ITEM.weaponCategory = "sidearm"
 ITEM.maxDurability = 1000
 
 function ITEM:GetDescription()
-	return (self.description .. L("itemBaseDurabilityDesc") .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
+	return (L(self.description) .. L("itemBaseDurabilityDesc") .. math.floor(self:GetData("Durability", self.maxDurability)).. " / ".. self.maxDurability)
 end
 
 -- Inventory drawing

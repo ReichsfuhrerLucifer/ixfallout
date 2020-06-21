@@ -1,4 +1,4 @@
-ITEM.name = "Type 93 Chienese Assault Rifle"
+ITEM.name = "Type 93 Chinese assault rifle"
 ITEM.description = "itemChineseAssaultRifleDesc"
 ITEM.class = "forp_chineseassaultrifle"
 ITEM.weaponCategory = "primary"
