@@ -1,5 +1,5 @@
-ITEM.name = "캐러밴 산탄총"
-ITEM.description = "황무지를 오가는 캐러밴들이 주로 사용하는 더블 배럴 산탄총입니다.\n20 게이지 산탄을 사용합니다."
+ITEM.name = "Caravan shotgun"
+ITEM.description = "itemCaravanShotgunDesc"
 ITEM.class = "forp_caravanshotgun"
 ITEM.weaponCategory = "primary"
 ITEM.price = 675

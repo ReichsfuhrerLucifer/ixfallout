@@ -1,9 +1,9 @@
 SWEP.Base = "sword_swepbase"
 
-SWEP.PrintName = "납 파이프"
+SWEP.PrintName = "Lead pipe"
 SWEP.Category = "Fallout RP"
 SWEP.Author = "Barata"
-SWEP.Instructions = "왼쪽 클릭: 공격하기\n오른쪽 클릭: 방어하기\nR: 받아넘기기"
+SWEP.Instructions = "Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
 SWEP.Purpose = ""
 
 SWEP.AdminSpawnable = true
@@ -93,7 +93,8 @@ function SWEP:Hitscan()
 		bullet.Force  = 5
 		bullet.Hullsize = 0
 		bullet.Distance = self.HitDistance * 1.5
-		bullet.Damage = 22
+		--vbullet.Damage = 22
+		bullet.Damage = 9
 		
 		bullet.Callback = function(attacker, tr, dmginfo)
 	dmginfo:SetDamageType(DMG_CLUB)

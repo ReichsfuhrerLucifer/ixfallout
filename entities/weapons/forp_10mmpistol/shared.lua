@@ -137,9 +137,11 @@ SWEP.Primary.Sound 		= Sound("weapons/pistol_10mm/wpn_pistol10mm_fire_2d.wav")
 -- SWEP.Primary.SuppressorSound	= Sound("Weapon_USP.SilencedShot")
 -- SWEP.Primary.NoSuppressorSound= Sound("Weapon_USP.Single")
 SWEP.Primary.Recoil		= 1.35
-SWEP.Primary.Damage		= 22
+-- SWEP.Primary.Damage		= 22
+SWEP.Primary.Damage		= 9
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone			= 0.08
+-- SWEP.Primary.Cone			= 0.08
+SWEP.Primary.Cone			= 0.05
 SWEP.Primary.Delay 		= 0.28
 
 SWEP.Primary.ClipSize		= 12					// Size of a clip

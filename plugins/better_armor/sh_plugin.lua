@@ -19,6 +19,14 @@ ix.lang.AddTable("english", {
 	itemChineseStealthArmorDesc = "Hēi Guǐ (黑鬼) stealth armor (lit. Black Ghost stealth armor), was developed on the Alaskan front during the Sino-American War by Chinese army to counter the U.S. Army's power armour.",
 	itemCombatArmorReinforcedDesc2 = "An armor modeled after the human silhouette, combat armors were designed to provide balanced protection without limiting user mobility.\nThis model is more protective than the previous one and has a tactical visor attached to the bulletproof helmet.\nFemale chracters can't equip this armor.\nTo change character's skin color, contact to the server admins.",
 	itemMercAdventurerOutfitDesc = "Dress of mercenary explorers roaming the Mojave wilderness.\nTo change character's skin color, contact to the server admins.",
+	itemT45DPowerArmorDesc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle.",
+	itemT45DPowerArmorBOSDesc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle.\nIt is painted for Brotherhood of Steel.",
+	itemT45DPowerArmorOutcastDesc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle.\nIt is painted for Brotherhood of Steel Outcast.",
+	itemT45DPowerArmorWoodlandDesc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle.\nIt is painted with woodland camoflague.",
+	itemT51BPowerArmorDesc = "It represented the peak of armored infantry technology before the Great War. Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments.",
+	itemT51BPowerArmorDesc = "It represented the peak of armored infantry technology before the Great War. Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments.\nIt is painted for Brotherhood of Steel.",
+	itemT60PowerArmorDesc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 as the pinnacle of powered armor technology in the U.S. military arsenal. The T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs.",
+	itemT60PowerArmorBOSDesc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51 as the pinnacle of powered armor technology in the U.S. military arsenal. The T-60 was deployed domestically among U.S. Army units just prior to the dropping of the bombs.\nIt is painted for Brotherhood of Steel.",
 })
 ix.lang.AddTable("korean", {
 	gasmaskRemoved = "방독면 착용을 해제했습니다.",
@@ -53,6 +61,21 @@ ix.lang.AddTable("korean", {
 	itemLeatherArmorReinforcedDesc2 = "가죽을 무두질해 만든 질긴 갑옷입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다.",
 	["Merc adventurer outfit"] = "용병 탐험가 복장",
 	itemMercAdventurerOutfitDesc = "모하비 황무지를 돌아다니는 용병 탐험가의 복장입니다.\n여성 캐릭터는 이 의상을 착용할 수 없습니다.\n백인/흑인/황인 피부 변경은 관리자에게 문의 바랍니다.",
+	["T-45d power armor"] = "T-45d 파워 아머",
+	itemT45DPowerArmorDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-45d 파워 아머입니다.",
+	["Brotherhood T-45d power armor"] = "브라더후드 T-45d 파워 아머",
+	itemT45DPowerArmorBOSDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-45d 파워 아머입니다.\n브라더후드 오브 스틸 도색이 되어 있습니다.",
+	["Outcast T-45d power armor"] = "아웃캐스트 T-45d 파워 아머",
+	itemT45DPowerArmorOutcastDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-45d 파워 아머입니다.\n브라더후드 오브 스틸 아웃캐스트 도색이 되어 있습니다.",
+	itemT45DPowerArmorWoodlandDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-45d 파워 아머입니다.\n우드랜드 위장 무늬 도색이 되어 있습니다.",
+	["T-51b power armor"] = "T-51b 파워 아머",
+	itemT51BPowerArmorDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-51b 파워 아머입니다.",
+	["Brotherhood T-51b power armor"] = "브라더후드 T-51b 파워 아머",
+	itemT51BPowerArmorBOSDesc = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-51b 파워 아머입니다.\n브라더후드 오브 스틸 도색이 되어 있습니다.",
+	["T-60a power armor"] = "T-60a 파워 아머",
+	itemT60PowerArmorDesc = "앵커리지 전투 이후부터 배치되기 시작한 파워 아머로, T-45 파워 아머의 설계를 기반으로 하고 있어 쉽게 개수가 가능합니다.",
+	["Brotherhodo T-60a power armor"] = "브라더후드 T-60a 파워 아머",
+	itemT60PowerArmorBOSDesc = "앵커리지 전투 이후부터 배치되기 시작한 파워 아머로, T-45 파워 아머의 설계를 기반으로 하고 있어 쉽게 개수가 가능합니다.\n브라더후드 오브 스틸 도색이 되어 있습니다.",
 })
 
 ix.util.Include("cl_plugin.lua")

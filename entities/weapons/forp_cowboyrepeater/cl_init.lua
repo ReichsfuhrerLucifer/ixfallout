@@ -1,6 +1,6 @@
 include('shared.lua')
 
-SWEP.PrintName			= "카우보이 리피터"					// 'Nice' Weapon name (Shown on HUD)	
+SWEP.PrintName			= "Cowboy repeater"					// 'Nice' Weapon name (Shown on HUD)	
 SWEP.Slot				= 3							// Slot in the weapon selection menu
 SWEP.SlotPos			= 1							// Position in the slot
 

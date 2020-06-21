@@ -1,8 +1,9 @@
-ITEM.name = "사냥용 소총"
-ITEM.description = "사냥꾼들이 주로 사용하던 .308 볼트 액션 소총입니다."
+ITEM.name = "Hunting rifle"
+ITEM.description = "itemHuntingRifleDesc"
 ITEM.class = "forp_huntingrifle"
 ITEM.weaponCategory = "primary"
-ITEM.price = 2200
+-- ITEM.price = 2200
+ITEM.price = 150
 ITEM.model = "models/halokiller38/fallout/weapons/rifles/huntingrifle.mdl"
 ITEM.width = 4
 ITEM.height = 1
@@ -13,4 +14,5 @@ ITEM.iconCam = {
 }
 ITEM.exRender = true
 
-ITEM.maxDurability = 3000
+-- ITEM.maxDurability = 3000
+ITEM.maxDurability = 5000

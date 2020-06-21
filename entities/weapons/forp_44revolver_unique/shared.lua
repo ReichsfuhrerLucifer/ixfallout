@@ -2,7 +2,7 @@
 Created with buu342s Swep Creator
 ---------------------------------*/
 
-SWEP.PrintName = "의문의 사나이의 .44 매그넘 리볼버"
+SWEP.PrintName = "Mysterious Stranger's .44 Magnum"
     
 SWEP.Author = "Karltroid51"
 SWEP.Contact = ""

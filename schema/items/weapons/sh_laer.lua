@@ -1,5 +1,5 @@
 ITEM.name = "LAER"
-ITEM.description = "레이저 보조 전자기 소총(LAER)은 펄스 건과 같이 전기 충격파를 발사하는 소총입니다.\n마이크로퓨전 셀을 탄약으로 사용합니다."
+ITEM.description = "itemLAERDesc"
 ITEM.class = "forp_laer"
 ITEM.weaponCategory = "primary"
 ITEM.price = 8000

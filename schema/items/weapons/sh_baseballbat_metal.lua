@@ -1,5 +1,5 @@
-ITEM.name = "강철 야구 방망이"
-ITEM.description = "대전쟁 전 사람들이 즐기던 스포츠의 일종인 야구 경기에 사용하던 방망이입니다."
+ITEM.name = "Baseball bat"
+ITEM.description = "itemBaseballBatDesc"
 ITEM.class = "f4_begotten_baseballbat_metal"
 ITEM.weaponCategory = "melee"
 ITEM.price = 250

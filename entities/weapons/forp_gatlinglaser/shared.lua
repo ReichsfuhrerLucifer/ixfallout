@@ -52,9 +52,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 			= Sound("weapons/gatlinglaser/wpn_gatlinglaser_fire_lpm.wav")
 SWEP.Primary.Recoil 		= 0.01
-SWEP.Primary.Damage 		= 10
+-- SWEP.Primary.Damage 		= 10
+SWEP.Primary.Damage 		= 8
 SWEP.Primary.NumShots 		= 1
-SWEP.Primary.Cone 			= 0.06
+-- SWEP.Primary.Cone 			= 0.06
+SWEP.Primary.Cone 			= 0.05
 SWEP.Primary.ClipSize 		= 240
 SWEP.Primary.Delay 			= 0.05
 SWEP.Primary.DefaultClip 	= 0

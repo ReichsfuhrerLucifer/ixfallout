@@ -108,7 +108,8 @@ SWEP.Primary.Sound 		= Sound("weapons/pistollaser/wpn_pistollaser_fire.wav")
 SWEP.Primary.Recoil		= .01
 SWEP.Primary.Damage		= 12  
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone 			= 0.01
+-- SWEP.Primary.Cone 			= 0.01
+SWEP.Primary.Cone 			= 0
 SWEP.Primary.Delay 		= 0.166667
 
 SWEP.Primary.ClipSize		= 30					// Size of a clip

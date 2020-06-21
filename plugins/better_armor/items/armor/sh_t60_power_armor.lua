@@ -1,5 +1,5 @@
-ITEM.name = "T-60 파워 아머"
-ITEM.description = "앵커리지 전투 이후부터 배치되기 시작한 파워 아머로, T-45 파워 아머의 설계를 기반으로 하고 있어 쉽게 개수가 가능합니다."
+ITEM.name = "T-60a power armor"
+ITEM.description = "itemT60PowerArmorDesc"
 ITEM.model = "models/mosi/fallout4/props/fortifications/vaultcrate04.mdl"
 ITEM.width = 3
 ITEM.height = 2
@@ -9,19 +9,36 @@ ITEM.iconCam = {
 	fov = 8.5
 }
 ITEM.exRender = true
-ITEM.armorAmount = 225
-ITEM.price = 10000
+-- ITEM.armorAmount = 225
+-- ITEM.price = 10000
+ITEM.price = 5760
 ITEM.gasmask = false -- It will protect you from bad air
 ITEM.resistance = true -- This will activate the protection bellow
 ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80.
-			0.2, -- Bullets
-			0.2, -- Slash
-			0.2, -- Shock
-			0.2, -- Burn
-			0.2, -- Radiation
+			0.31, -- Bullets
+			0.31, -- Slash
+			0.31, -- Shock
+			0.31, -- Burn
+			0.68, -- Radiation
 			1, -- Acid
-			0.2, -- Explosion
+			0.31, -- Explosion
 }
 ITEM.replacements = "models/adi/t601_rustvar2_pm.mdl"
 
-ITEM.maxDurability = 2400
+ITEM.maxDurability = 2430
+
+ITEM:Hook("Equip", function(item)
+	local client = item.player
+	local char = client:GetCharacter()
+	local str = char:GetAttritue("str", 0)
+	
+	client:SetAttrib("str", math.max(str + 2, 0))
+end)
+
+ITEM:Hook("EquipUn", function(item)
+	local client = item.player
+	local char = client:GetCharacter()
+	local str = char:GetAttritue("str", 0)
+	
+	client:SetAttrib("str", math.max(str - 2, 0))
+end)

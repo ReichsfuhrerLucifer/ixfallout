@@ -1,9 +1,9 @@
 SWEP.Base = "sword_swepbase"
 
-SWEP.PrintName = "강철 야구 방망이"
-SWEP.Category = "Fallout 4"
+SWEP.PrintName = "Baseball bat"
+SWEP.Category = "Fallout RP"
 SWEP.Author = "Barata"
-SWEP.Instructions = "왼쪽 클릭: 공격하기\n오른쪽 클릭: 방어하기\nR: 받아넘기기"
+SWEP.Instructions = "Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
 SWEP.Purpose = ""
 
 SWEP.AdminSpawnable = true

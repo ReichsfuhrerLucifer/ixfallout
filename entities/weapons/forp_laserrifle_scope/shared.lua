@@ -19,7 +19,7 @@ SWEP.WElements = {
 }
 end
 
-SWEP.PrintName			= "레이저 라이플 (조준경)"					// 'Nice' Weapon name (Shown on HUD)	
+SWEP.PrintName			= "Laser rifle"					// 'Nice' Weapon name (Shown on HUD)	
 SWEP.Base 				= "boh_scoped_base"
 SWEP.Category			= "Fallout RP"
 SWEP.Spawnable			= true
@@ -48,7 +48,8 @@ SWEP.Primary.KickUp				= 0.01				-- Maximum up recoil (rise)
 SWEP.Primary.KickDown			= 0.01			-- Maximum down recoil (skeet)
 SWEP.Primary.KickHorizontal		= 0.01		-- Maximum up recoil (stock)
 SWEP.Primary.Recoil				= 0.01
-SWEP.Primary.Cone				= 0.0025
+-- SWEP.Primary.Cone				= 0.0025
+SWEP.Primary.Cone				= 0
 SWEP.Primary.Automatic			= false		-- Automatic/Semi Auto
 SWEP.Primary.Ammo			= "MicrofusionCell"	
 
@@ -68,9 +69,12 @@ SWEP.data.ironsights		= 1
 SWEP.ScopeScale 			= 0.7
 
 SWEP.Primary.NumShots	= 1		--how many bullets to shoot per trigger pull
-SWEP.Primary.Damage		= 22	--base damage per bullet
-SWEP.Primary.Spread		= .025	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
-SWEP.Primary.IronAccuracy = .025 -- ironsight accuracy, should be the same for shotguns
+-- SWEP.Primary.Damage		= 22	--base damage per bullet
+SWEP.Primary.Damage		= 23	--base damage per bullet
+-- SWEP.Primary.Spread		= .025	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
+SWEP.Primary.Spread		= 0	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
+-- SWEP.Primary.IronAccuracy = .025 -- ironsight accuracy, should be the same for shotguns
+SWEP.Primary.IronAccuracy = 0 -- ironsight accuracy, should be the same for shotguns
 
 /*---------------------------------------------------------
 Muzzle Effect + Shell Effect

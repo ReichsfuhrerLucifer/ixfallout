@@ -79,9 +79,11 @@ SWEP.EjectDelay				= 0
 
 SWEP.Primary.Sound 		= Sound("weapons/laserrifle/wpn_rifle_laser_fire_2d.wav")
 SWEP.Primary.Recoil		= .01
-SWEP.Primary.Damage		= 22
+-- SWEP.Primary.Damage		= 22
+SWEP.Primary.Damage		= 23
 SWEP.Primary.NumShots		= 2
-SWEP.Primary.Cone 			= 0.0025
+-- SWEP.Primary.Cone 			= 0.0025
+SWEP.Primary.Cone 			= 0
 SWEP.Primary.Delay 		= 0.35
 
 SWEP.Primary.ClipSize		= 24					// Size of a clip

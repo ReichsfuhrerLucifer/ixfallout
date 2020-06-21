@@ -115,9 +115,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 		= Sound("weapons/Pistol_10mm/wpn_Pistol10mm_fire_2d.wav")
 SWEP.Primary.Recoil		= .5
-SWEP.Primary.Damage		= 19
+-- SWEP.Primary.Damage		= 19
+SWEP.Primary.Damage		= 7
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone			= 0.22
+-- SWEP.Primary.Cone			= 0.22
+SWEP.Primary.Cone			= 0.15
 SWEP.Primary.Delay 		= 0.1
 
 SWEP.Primary.ClipSize		= 30					// Size of a clip

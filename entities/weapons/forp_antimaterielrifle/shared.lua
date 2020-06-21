@@ -7,7 +7,7 @@ SWEP.WElements = {
 }
 end
 
-SWEP.PrintName			= "대물 저격총"					// 'Nice' Weapon name (Shown on HUD)	
+SWEP.PrintName			= "Anti-materiel rifle"					// 'Nice' Weapon name (Shown on HUD)	
 SWEP.Base 				= "boh_scoped_base"
 SWEP.Category			= "Fallout RP"
 SWEP.Spawnable			= true

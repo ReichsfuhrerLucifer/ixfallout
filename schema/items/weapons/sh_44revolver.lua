@@ -1,5 +1,5 @@
-ITEM.name = ".44 매그넘 리볼버"
-ITEM.description = "스윙 아웃 실린더를 채택한 더블 액션 .44 매그넘 리볼버 권총입니다.\n.44 매그넘 권총 탄약을 사용합니다."
+ITEM.name = ".44 Magnum revolver"
+ITEM.description = "item44Revolver"
 ITEM.class = "forp_44revolver"
 ITEM.weaponCategory = "sidearm"
 ITEM.price = 2500

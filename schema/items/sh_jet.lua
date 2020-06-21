@@ -8,10 +8,12 @@ ITEM.functions.Inhale = {
 	OnRun = function(item)
 		local client = item.player
 		local character = client:GetCharacter()
-		local agi = character:GetAttribute("agi", 0)
+		local stm = character:GetAttribute("stm", 0)
+		local endurance = character:GetAttribute("end", 0)
 			
 		client:EmitSound("ui/using_jet.wav")
 		client:RestoreStamina(math.min(30 + int, 100))
-		character:SetAttrib("agi", agi + 0.2)
+		character:SetAttrib("stm", stm + 0.2)
+		character:SetAttrib("end", endurance + 0.2)
 	end
 }

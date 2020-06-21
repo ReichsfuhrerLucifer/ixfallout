@@ -1,5 +1,5 @@
-ITEM.name = "12.7mm 권총"
-ITEM.description = "스위스제 SIG-자우어 14mm 권총을 개조하여 12.7mm 권총 탄약을 사용하도록 만든 자동 권총입니다."
+ITEM.name = "12.7mm pistol"
+ITEM.description = "item127mmPistolDesc"
 ITEM.class = "forp_127mmpistol"
 ITEM.weaponCategory = "sidearm"
 ITEM.price = 4000

@@ -1,8 +1,9 @@
-ITEM.name = "전투용 단검"
-ITEM.description = "대전쟁 전 미군의 제식으로 채택되었던 단검으로 가볍고 예리합니다."
+ITEM.name = "Combat knife"
+ITEM.description = "itemCombatKnifeDesc"
 ITEM.class = "forp_combatknife"
 ITEM.weaponCategory = "melee"
-ITEM.price = 500
+-- ITEM.price = 500
+ITEM.price = 50
 ITEM.model = "models/mosi/fallout4/props/weapons/melee/knife.mdl"
 ITEM.width = 1
 ITEM.height = 2
@@ -13,4 +14,5 @@ ITEM.iconCam = {
 }
 ITEM.exRender = true
 
-ITEM.maxDurability = 900
+-- ITEM.maxDurability = 900
+ITEM.maxDurability = 4500

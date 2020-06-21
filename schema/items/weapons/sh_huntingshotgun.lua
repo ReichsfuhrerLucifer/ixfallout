@@ -1,5 +1,5 @@
-ITEM.name = "사냥용 산탄총"
-ITEM.description = "사냥꾼들이 주로 사용하던 12 게이지 산탄총입니다."
+ITEM.name = "Hunting shotgun"
+ITEM.description = "itemHuntingShotgunDesc"
 ITEM.class = "forp_huntingshotgun"
 ITEM.weaponCategory = "primary"
 ITEM.price = 3800

@@ -1,8 +1,9 @@
-ITEM.name = "전투 산탄총"
-ITEM.description = "대전쟁 이전 미군의 제식 산탄총으로 20 게이지 산탄을 사용합니다."
+ITEM.name = "Combat shotgun"
+ITEM.description = "itemCombatShotgunDesc"
 ITEM.class = "forp_combatshotgun"
 ITEM.weaponCategory = "primary"
-ITEM.price = 5500
+-- ITEM.price = 5500
+ITEM.price = 200
 ITEM.model = "models/halokiller38/fallout/weapons/shotguns/combatshotgun.mdl"
 ITEM.width = 4
 ITEM.height = 1

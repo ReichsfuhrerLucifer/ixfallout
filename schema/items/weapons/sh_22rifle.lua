@@ -1,5 +1,5 @@
-ITEM.name = ".22 소총"
-ITEM.description = "유해 조수를 사냥하기 위해 주로 쓰이던 소총으로, .22 구경 탄약을 사용합니다."
+ITEM.name = ".22 rifle"
+ITEM.description = "item22RifleDesc"
 ITEM.class = "forp_22rifle"
 ITEM.weaponCategory = "primary"
 ITEM.price = 20

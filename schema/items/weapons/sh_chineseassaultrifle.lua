@@ -1,8 +1,9 @@
-ITEM.name = "중공군 돌격 소총"
-ITEM.description = "대전쟁 이전 중공군의 제식 소총으로 탄약 수급을 원활하게 하기 위해 5.56mm 소총탄을 사용합니다."
+ITEM.name = "Type 93 Chienese Assault Rifle"
+ITEM.description = "itemChineseAssaultRifleDesc"
 ITEM.class = "forp_chineseassaultrifle"
 ITEM.weaponCategory = "primary"
-ITEM.price = 4500
+-- ITEM.price = 4500
+ITEM.price = 500
 ITEM.model = "models/halokiller38/fallout/weapons/assaultrifles/chineseassaultrifle.mdl"
 ITEM.width = 4
 ITEM.height = 2

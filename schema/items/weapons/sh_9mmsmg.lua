@@ -1,5 +1,5 @@
-ITEM.name = "9mm 기관단총"
-ITEM.description = "9mm 권총 탄약을 자동 사격하는 기관단총입니다."
+ITEM.name = "9mm submachine gun"
+ITEM.description = "item9mmSMGDesc"
 ITEM.class = "forp_9mmsmg"
 ITEM.weaponCategory = "primary"
 ITEM.price = 850

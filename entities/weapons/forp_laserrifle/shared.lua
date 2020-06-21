@@ -104,9 +104,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 		= Sound("weapons/laserrifle/wpn_rifle_laser_fire_2d.wav")
 SWEP.Primary.Recoil 		= .01
-SWEP.Primary.Damage 		= 22
+-- SWEP.Primary.Damage 		= 22
+SWEP.Primary.Damage 		= 23
 SWEP.Primary.NumShots 		= 1
-SWEP.Primary.Cone 			= .0025
+-- SWEP.Primary.Cone 			= .0025
+SWEP.Primary.Cone 			= 0
 SWEP.Primary.ClipSize 		= 24
 SWEP.Primary.Delay 			= 0.35
 SWEP.Primary.DefaultClip 	= 0

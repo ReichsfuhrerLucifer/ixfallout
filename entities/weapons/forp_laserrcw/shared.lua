@@ -68,7 +68,7 @@ local LaserHitImpact = function(attacker, tr, dmginfo)
 	return true
 end
 
-SWEP.PrintName = "레이저 RCW"
+SWEP.PrintName = "Laser RCW"
 
 if (CLIENT) then
 SWEP.VElements = {

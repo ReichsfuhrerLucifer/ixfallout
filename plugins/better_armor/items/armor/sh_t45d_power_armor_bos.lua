@@ -1,5 +1,5 @@
-ITEM.name = "T-45d 파워 아머\n(BOS)"
-ITEM.description = "대전쟁 중 미군이 전차 대용으로 개발한 강화복인 T-45d 파워 아머입니다.\n브라더후드 오브 스틸 도색이 되어 있습니다."
+ITEM.name = "Brotherhood T-45d power armor"
+ITEM.description = "itemT45DPowerArmorBOSDesc"
 ITEM.model = "models/mosi/fallout4/props/fortifications/vaultcrate04.mdl"
 ITEM.width = 3
 ITEM.height = 2
@@ -9,8 +9,9 @@ ITEM.iconCam = {
 	fov = 8.5
 }
 ITEM.exRender = true
-ITEM.armorAmount = 200
-ITEM.price = 5800
+-- ITEM.armorAmount = 225
+-- ITEM.price = 5800
+ITEM.price = 1110
 ITEM.gasmask = false -- It will protect you from bad air
 ITEM.resistance = true -- This will activate the protection bellow
 ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80.
@@ -18,10 +19,30 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 			0.52, -- Slash
 			0.52, -- Shock
 			0.52, -- Burn
-			0.9, -- Radiation
+			0.87, -- Radiation
 			1, -- Acid
 			0.52, -- Explosion
 }
 ITEM.replacements = "models/player/bs/hub/knight.mdl"
 
 ITEM.maxDurability = 1075
+
+ITEM:Hook("Equip", function(item)
+	local client = item.player
+	local char = client:GetCharacter()
+	local str = char:GetAttritue("str", 0)
+	local stm = char:GetAttritue("stm", 0)
+	
+	client:SetAttrib("str", math.max(str + 2, 0))
+	client:SetAttrib("stm", math.max(stm - 2, 0))
+end)
+
+ITEM:Hook("EquipUn", function(item)
+	local client = item.player
+	local char = client:GetCharacter()
+	local str = char:GetAttritue("str", 0)
+	local stm = char:GetAttritue("stm", 0)
+	
+	client:SetAttrib("str", math.max(str - 2, 0))
+	client:SetAttrib("stm", math.max(stm + 2, 0))
+end)

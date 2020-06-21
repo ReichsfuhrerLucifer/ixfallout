@@ -1,5 +1,5 @@
-ITEM.name = "카우보이 리피터"
-ITEM.description = ".357 매그넘 권총탄을 사용하는 레버 액션 라이플입니다."
+ITEM.name = "Cowboy repeater"
+ITEM.description = "itemCowboyRepeaterDesc"
 ITEM.class = "forp_cowboyrepeater"
 ITEM.weaponCategory = "primary"
 ITEM.price = 800

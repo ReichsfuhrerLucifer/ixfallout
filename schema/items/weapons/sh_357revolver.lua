@@ -1,5 +1,5 @@
-ITEM.name = ".357 매그넘 리볼버"
-ITEM.description = "고정 실린더를 채택한 싱글 액션 .357 매그넘 리볼버 권총입니다.\n.357 매그넘 권총 탄약을 사용합니다."
+ITEM.name = ".357 Magnum revolver"
+ITEM.description = "item357revolver"
 ITEM.class = "forp_357revolver"
 ITEM.weaponCategory = "sidearm"
 ITEM.price = 110

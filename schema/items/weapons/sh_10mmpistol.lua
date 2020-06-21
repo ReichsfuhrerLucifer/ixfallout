@@ -1,8 +1,9 @@
-ITEM.name = "N99 10mm 권총"
-ITEM.description = "2051년 기존의 N80 권총을 대체하여 제식 채용된 자동 권총으로, 10mm 권총 탄약을 사용합니다."
+ITEM.name = "N99 10mm pistol"
+ITEM.description = "item10mmPistolDesc"
 ITEM.class = "forp_10mmpistol"
 ITEM.weaponCategory = "sidearm"
-ITEM.price = 750
+-- ITEM.price = 750 -- New Vegas
+ITEM.price = 225 -- Fallout 3
 ITEM.model = "models/halokiller38/fallout/weapons/pistols/10mmpistol.mdl"
 ITEM.width = 2
 ITEM.height = 1
@@ -13,4 +14,5 @@ ITEM.iconCam = {
 }
 ITEM.exRender = true
 
-ITEM.maxDurability = 800
+-- ITEM.maxDurability = 800 -- New Vegas
+ITEM.maxDurability = 1500 -- New Vegas

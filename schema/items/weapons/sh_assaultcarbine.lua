@@ -1,5 +1,5 @@
-ITEM.name = "돌격 소총"
-ITEM.description = "완전 자동 사격이 가능한 단축형 돌격 소총으로, 5mm 실탄을 사용합니다."
+ITEM.name = "Assault carbine"
+ITEM.description = "itemAssaultCarbineDesc"
 ITEM.class = "forp_assaultcarbine"
 ITEM.weaponCategory = "primary"
 ITEM.price = 3950

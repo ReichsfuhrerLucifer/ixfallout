@@ -1,5 +1,5 @@
-ITEM.name = "대물 저격총"
-ITEM.description = "장갑판마저 가볍게 뚫어버리는 .50 MG탄을 사용하는 볼트 액션 저격 소총입니다."
+ITEM.name = "Anti-materiel rifle"
+ITEM.description = "itemAntiMaterielRifleDesc"
 ITEM.class = "forp_antimaterielrifle"
 ITEM.weaponCategory = "primary"
 ITEM.price = 5600

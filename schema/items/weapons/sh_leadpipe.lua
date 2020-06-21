@@ -1,5 +1,5 @@
-ITEM.name = "납 파이프"
-ITEM.description = "어딘가의 파이프라인에 쓰이던 납으로 된 배관입니다."
+ITEM.name = "Lead pipe"
+ITEM.description = "itemLeadPipeDesc"
 ITEM.class = "forp_leadpipe"
 ITEM.weaponCategory = "melee"
 ITEM.price = 75
@@ -13,4 +13,5 @@ ITEM.iconCam = {
 }
 ITEM.exRender = true
 
-ITEM.maxDurability = 500
+-- ITEM.maxDurability = 500
+ITEM.maxDurability = 300

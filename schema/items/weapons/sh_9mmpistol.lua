@@ -1,5 +1,5 @@
-ITEM.name = "M&A 9mm 권총"
-ITEM.description = "전쟁 전 M&A 총기 설계사에서 설계한 자동 권총으로, 뉴 캘리포니아 공화국 군대의 제식 권총입니다.\n9mm 권총 탄약을 사용합니다."
+ITEM.name = "M&A 9mm pistol"
+ITEM.description = "item9mmPistolDesc"
 ITEM.class = "forp_9mmpistol"
 ITEM.weaponCategory = "sidearm"
 ITEM.price = 100

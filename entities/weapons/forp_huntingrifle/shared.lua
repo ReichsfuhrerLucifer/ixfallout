@@ -113,9 +113,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 		= Sound("weapons/riflehunting/wpn_huntingrifle.wav")
 SWEP.Primary.Recoil		= 1
-SWEP.Primary.Damage		= 52
+-- SWEP.Primary.Damage		= 52
+SWEP.Primary.Damage		= 25
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone			= 0.01
+-- SWEP.Primary.Cone			= 0.01
+SWEP.Primary.Cone			= 0.03
 SWEP.Primary.Delay 		= 0.7
 
 SWEP.Primary.ClipSize		= 5					// Size of a clip
