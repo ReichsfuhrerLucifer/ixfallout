@@ -6,7 +6,7 @@ ITEM.model = "models/weapons/w_pistol.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.skill = "strength"
-ITEM.amount = 1
+ITEM.skillAmount = 1
 
 ITEM.functions.Read = {
 	icon = "icon16/book_open.png",
@@ -21,13 +21,13 @@ ITEM.functions.Read = {
 		elseif item.skill == "endurance" then
 			local skill = "end"
 		elseif item.skill == "intelligence" then
-			local skill == "int"
+			local skill = "int"
 		elseif item.skill == "agility" then
-			local skill == "stm"
+			local skill = "stm"
 		elseif item.skill == "luck" then
-			local skill == "lck"
+			local skill = "lck"
 		end
 
-		client:SetAttrib(skill, math.max(att + amount, 0))
+		client:SetAttrib(skill, math.max(att + item.skillAmount, 0))
 	end
 }

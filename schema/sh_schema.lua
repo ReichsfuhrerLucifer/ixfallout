@@ -18,6 +18,10 @@ ix.anim.SetModelClass("models/adi/t601_lyonspride_pm.mdl", "player")
 ix.anim.SetModelClass("models/adi/t601_rustvar2_pm.mdl", "player")
 ix.anim.SetModelClass("models/kuma96/hazmatsuit_female/hazmatsuit_female_pm.mdl", "player")
 ix.anim.SetModelClass("models/kuma96/hazmatsuit_male/hazmatsuit_male_pm.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/combatarmour_mk1_female_01.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/combatarmour_mk1_male_09.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/leatherarmour_mk2_female_01.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/leatherarmour_mk2_male_09.mdl", "player")
 
 -----------------------
 --[[ FUNCTIONS ]]--
@@ -30,7 +34,7 @@ end
 -----------------------
 --[[ CONFIGURATION ]]--
 -----------------------
-ix.currency.Set("","Cap", "Caps")
+ix.currency.Set("", "Cap", "Caps")
 
 ix.config.SetDefault("color", Color(26, 255, 128, 255))
 -- Color(26, 255, 128, 255) -- Green

@@ -19,15 +19,16 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 }
 
 ITEM.replacements = {
-	{"neutral/hub", "hub/neutrals"},
-	{"wastelander1_", ""},
-	{"wastelander2_", ""},
-	{"wastelander3_", ""},
-	{"male_", "mark1/"},
-	{"01", "mark1"},
-	{"05", "mark1"},
-	{"09", "mark1"},
-	{"ghoul", "mark1_ghoul"}
+	{"player/neutral/hub", "hub/extra"},
+	{"wastelander1_", "combatarmour_mk1_"},
+	{"wastelander2_", "combatarmour_mk1_"},
+	{"wastelander3_", "combatarmour_mk1_"},
+	{"04", "01"},
+	{"07", "01"},
+	{"female_ghoul", "female_01"},
+	{"01", "09"},
+	{"05", "09"},
+	{"male_ghoul", "male_09"},
 }
 
 ITEM.maxDurability = 700
