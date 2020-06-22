@@ -206,6 +206,10 @@ LANGUAGE = {
 	itemLaserRifleSplitterDesc = "대전쟁 이전에 군용 무기로 사용되었던 레이저 화기로, 거친 환경에서도 신뢰성이 아주 높았기 때문에 널리 사용되었습니다.\n분광기가 달려 있습니다.\n마이크로퓨전 셀을 탄약으로 사용합니다.",
 	["Lead pipe"] = "납 파이프",
 	itemLeadPipeDesc = "어딘가의 배관에 쓰이던 납으로 된 배관입니다.",
+	["Light machine gun"] = "경기관총",
+	itemLMGDesc = "분대지원화기로 쓰일 수 있도록 소총탄을 사용하는 기관총으로, 대전쟁 전 미국의 제식 소총탄이었던 5.56mm 소총탄을 사용합니다.",
+	["Machete"] = "마체테",
+	itemMacheteDesc = "날이 넓적하게 생겨 잎이나 가지, 덩쿨을 쳐내는 데 쓰기 편합니다.",
 	
 	-- Misc
 	voices = "음성 대사",

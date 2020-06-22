@@ -1,9 +1,12 @@
 SWEP.Base = "sword_swepbase"
 
-SWEP.PrintName = "마체테"
+if CLIENT then
+SWEP.PrintName = "Machete"
+SWEP.Instructions = "Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
+end
 SWEP.Category = "Fallout RP"
 SWEP.Author = "Barata"
-SWEP.Instructions = "왼쪽 클릭: 공격하기\n오른쪽 클릭: 방어하기\nR: 받아넘기기"
+
 SWEP.Purpose = ""
 
 SWEP.AdminSpawnable = true

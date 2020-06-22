@@ -1,6 +1,6 @@
 include('shared.lua')
 
-SWEP.PrintName			= "경기관총"					// 'Nice' Weapon name (Shown on HUD)	
+SWEP.PrintName			= L"Light machine gun"					// 'Nice' Weapon name (Shown on HUD)	
 SWEP.Slot				= 3							// Slot in the weapon selection menu
 SWEP.SlotPos			= 1							// Position in the slot
 

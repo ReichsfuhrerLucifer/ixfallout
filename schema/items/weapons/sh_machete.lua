@@ -1,5 +1,5 @@
-ITEM.name = "마체테"
-ITEM.description = "날이 넓적하게 생겨 잎이나 가지, 덩쿨을 쳐내는 데 쓰기 편합니다."
+ITEM.name = "Machete"
+ITEM.description = "itemMacheteDesc"
 ITEM.class = "forp_machete"
 ITEM.weaponCategory = "melee"
 ITEM.price = 75

@@ -115,6 +115,8 @@ LANGUAGE = {
 	itemLaserRifleScopeDesc = "It was actually not the top laser rifle in service at the time of the Great War. The model line went up to the state-of-the-art AER12, which saw service in a handful of specialty units. The reason that the AER9 is much more commonly found is that it was much sturdier and more reliable than the models that followed.\nIt has a scope attached.\nIt utilizes microfusion cells.",
 	itemLaserRifleSplitterDesc = "It was actually not the top laser rifle in service at the time of the Great War. The model line went up to the state-of-the-art AER12, which saw service in a handful of specialty units. The reason that the AER9 is much more commonly found is that it was much sturdier and more reliable than the models that followed.\nIt has a splitter attached.\nIt utilizes microfusion cells.",
 	itemLeadPipeDesc = "A lead pipe used somewhere in a pipeline.",
+	itemLMGDesc = "A fully automatic 5.56mm machine gun with a rapid rate of fire and an ammunition capacity of 90 5.56mm rounds. In 2281 within the New California Republic Army, the light machine gun is only issued to the NCR heavy troopers, the finest of the NCR troops.",
+	itemMacheteDesc = "A large, long, sharp knife, designed to hack through vegetation. They make handy melee weapons too.",
 
 	voices = "Voices",
 }
