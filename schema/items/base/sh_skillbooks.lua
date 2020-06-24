@@ -28,6 +28,6 @@ ITEM.functions.Read = {
 			local skill = "lck"
 		end
 
-		client:SetAttrib(skill, math.max(att + item.skillAmount, 0))
+		character:SetAttrib(skill, math.max(att + item.skillAmount, 0))
 	end
 }

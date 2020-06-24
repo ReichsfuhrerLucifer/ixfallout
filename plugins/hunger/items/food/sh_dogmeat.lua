@@ -1,5 +1,5 @@
 ITEM.name = "Dog meat"
-ITEM.model = "models/mosi/fallout4/props/food/dogmeat.mdl"
+ITEM.model = "models/fallout 3/meat.mdl"
 ITEM.description = "itemDogMeatDesc"
 ITEM.price = 4
 ITEM.hunger = 35

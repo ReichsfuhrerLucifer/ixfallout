@@ -5,10 +5,30 @@ FACTION.isDefault = false
 FACTION.pay = 10
 
 FACTION.models = {
-	"models/enclave/enclaveofficer_01.mdl",
-	"models/enclave/enclaveofficer_01_1.mdl",
-	"models/enclave/enclaveofficer_02.mdl",
-	"models/enclave/enclaveofficer_02_1.mdl"
+	"models/player/neutral/hub/wastelander1_female_01.mdl",
+	"models/player/neutral/hub/wastelander1_female_04.mdl",
+	"models/player/neutral/hub/wastelander1_female_07.mdl",
+	"models/player/neutral/hub/wastelander1_female_ghoul.mdl",
+	"models/player/neutral/hub/wastelander1_male_01.mdl",
+	"models/player/neutral/hub/wastelander1_male_05.mdl",
+	"models/player/neutral/hub/wastelander1_male_09.mdl",
+	"models/player/neutral/hub/wastelander1_male_ghoul.mdl",
+	"models/player/neutral/hub/wastelander2_female_01.mdl",
+	"models/player/neutral/hub/wastelander2_female_04.mdl",
+	"models/player/neutral/hub/wastelander2_female_07.mdl",
+	"models/player/neutral/hub/wastelander2_female_ghoul.mdl",
+	"models/player/neutral/hub/wastelander2_male_01.mdl",
+	"models/player/neutral/hub/wastelander2_male_05.mdl",
+	"models/player/neutral/hub/wastelander2_male_09.mdl",
+	"models/player/neutral/hub/wastelander2_male_ghoul.mdl",
+	"models/player/neutral/hub/wastelander3_female_01.mdl",
+	"models/player/neutral/hub/wastelander3_female_04.mdl",
+	"models/player/neutral/hub/wastelander3_female_07.mdl",
+	"models/player/neutral/hub/wastelander3_female_ghoul.mdl",
+	"models/player/neutral/hub/wastelander3_male_01.mdl",
+	"models/player/neutral/hub/wastelander3_male_05.mdl",
+	"models/player/neutral/hub/wastelander3_male_09.mdl",
+	"models/player/neutral/hub/wastelander3_male_ghoul.mdl"
 }
 
 function FACTION:OnCharacterCreated(client, character)

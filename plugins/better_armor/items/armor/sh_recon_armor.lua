@@ -1,6 +1,6 @@
 
 ITEM.name = "리콘 아머"
-ITEM.description = "파워 아머를 입을 때 안에 받혀 입어야 한다는 복장이지만, 이 상태로도 전투에 참여할 수 있습니다.\n구울 / 여 캐릭터는 입을 수 없습니다."
+ITEM.description = "파워 아머를 입을 때 안에 받혀 입어야 한다는 복장이지만, 이 상태로도 전투에 참여할 수 있습니다.\n구울 / 여성 캐릭터는 입을 수 없습니다."
 ITEM.model = "models/Items/item_item_crate.mdl"
 ITEM.height = 2
 ITEM.width = 2
@@ -20,6 +20,8 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 ITEM.replacements = {
 	{"player/neutral/hub", "reconarmor"},
 	{"wastelander1_male", "reconarmor"},
+	{"wastelander2_male", "reconarmor"},
+	{"wastelander3_male", "reconarmor"},
 }
 
 ITEM.maxDurability = 440

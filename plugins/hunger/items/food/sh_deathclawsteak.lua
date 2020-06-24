@@ -1,5 +1,5 @@
 ITEM.name = "Deathclaw steak"
-ITEM.model = "models/mosi/fallout4/props/food/deathclawmeat.mdl"
+ITEM.model = "models/mosi/fallout4/props/food/steak.mdl"
 ITEM.skin = 1
 ITEM.description = "itemDeathclawSteakDesc"
 ITEM.price = 130

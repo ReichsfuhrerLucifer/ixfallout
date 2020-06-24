@@ -22,6 +22,10 @@ ix.anim.SetModelClass("models/hub/extra/combatarmour_mk1_female_01.mdl", "player
 ix.anim.SetModelClass("models/hub/extra/combatarmour_mk1_male_09.mdl", "player")
 ix.anim.SetModelClass("models/hub/extra/leatherarmour_mk2_female_01.mdl", "player")
 ix.anim.SetModelClass("models/hub/extra/leatherarmour_mk2_male_09.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/merc_adventurer_female_01.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/merc_adventurer_male_09.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/merc_cruiser_female_01.mdl", "player")
+ix.anim.SetModelClass("models/hub/extra/merc_cruiser_male_09.mdl", "player")
 
 -----------------------
 --[[ FUNCTIONS ]]--

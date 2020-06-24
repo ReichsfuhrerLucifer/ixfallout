@@ -1,5 +1,5 @@
 ITEM.name = "Caravan lunch"
-ITEM.model = "models/mosi/fallout4/props/food/cram.mdl"
+ITEM.model = "models/mosi/fallout4/props/junk/lunchbox.mdl"
 ITEM.description = "itemCaravanLunchDesc"
 ITEM.price = 5
 ITEM.hunger = 100

@@ -20,9 +20,9 @@ ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80
 }
 
 ITEM.replacements = {
-	{"neutral/hub/wastelander1", "bs/hub/recon"},
-	{"neutral/hub/wastelander2", "bs/hub/recon"},
-	{"neutral/hub/wastelander3", "bs/hub/recon"}
+	{"neutral/hub/wastelander1", "enclave/hub/trooper"},
+	{"neutral/hub/wastelander2", "enclave/hub/trooper"},
+	{"neutral/hub/wastelander3", "enclave/hub/trooper"}
 }
 
 ITEM.maxDurability = 450
