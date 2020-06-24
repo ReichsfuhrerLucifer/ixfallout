@@ -27,22 +27,7 @@ ITEM.replacements = "models/fallout_3/t51b.mdl"
 
 ITEM.maxDurability = 2100
 
-ITEM:Hook("Equip", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	local endurance = char:GetAttribute("end", 0)
-	
-	char:SetAttrib("str", math.max(str + 1, 0))
-	char:SetAttribute("end", math.max(endurance + 1, 0))
-end)
-
-ITEM:Hook("EquipUn", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	local endurance = char:GetAttribute("end", 0)
-	
-	char:SetAttrib("str", math.max(str - 1, 0))
-	char:SetAttribute("end", math.max(endurance - 1, 0))
-end)
+ITEM.attribBoosts = {
+	["str"] = 1,
+	["end"] = 1,
+}

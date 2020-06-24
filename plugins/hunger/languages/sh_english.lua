@@ -4,6 +4,7 @@ LANGUAGE = {
 	itemBrahminMeatDesc = "A raw meat of brahmin taken straight from their corpses.",
 	itemBrahminSteakDesc = "Brahmin meat that's been cooked, brahmin steak is a favorite among military personnel, wasteland inhabitants and raiders alike.",
 	itemBubblegumDesc = "A confectionery treat targeted towards children.",
+	itemCaravanLunchDesc = "A collection of food items with the harmful radiation removed. It is often eaten by caravan merchants, due to the filling nature of the food and preparation simplicity.",
 	itemCarrotDesc = "These carrots have become mutated and are much fatter, with longer, thicker off-shooting roots branching from the main taproot.",
 	itemChineseFoodDesc = "A spicy Chinese stir-fried food in a paper box.",
 	itemCornDesc = "Unlike other plants, it hasn't visibly mutated nearly as much. It appears to have a yellowish-purple color, suggesting it may be related to flint maize, also known as Indian corn.",

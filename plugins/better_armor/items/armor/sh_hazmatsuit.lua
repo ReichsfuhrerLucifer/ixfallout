@@ -1,21 +1,21 @@
 
-ITEM.name = "Hazmat suit"
-ITEM.description = "itemHazmatSuitDesc"
+ITEM.name = "Radiation suit"
+ITEM.description = "itemRadiationSuitDesc"
 ITEM.model = "models/props_c17/SuitCase_Passenger_Physics.mdl"
 ITEM.width = 2
-ITEM.armorAmount = 40
+-- ITEM.armorAmount = 40
 ITEM.height = 2
 ITEM.price = 60
 ITEM.gasmask = false
 ITEM.resistance = true
 ITEM.damage = { -- It is scaled; so 100 damage * 0.8 will makes the damage be 80.
-			1, -- Bullets
-			1, -- Slash
-			1, -- Shock
-			1, -- Burn
-			0.1, -- Radiation
-			1, -- Acid
-			1, -- Explosion
+			.95, -- Bullets
+			.95, -- Slash
+			.95, -- Shock
+			.95, -- Burn
+			.7, -- Radiation
+			.95, -- Acid
+			.95, -- Explosion
 }
 ITEM.replacements = {
 	{"player/neutral/hub/wastelander1", "kuma96/hazmatsuit"},

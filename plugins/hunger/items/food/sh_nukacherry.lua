@@ -11,7 +11,12 @@ ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("ui/drink.wav")
-	client:SetHealth(math.min(client:Health() + 5, client:GetMaxHealth()))
 	client:RestoreStamina(15)
 	client:GetCharacter():GiveMoney(1)
+
+	for i = 1, 25 do
+		timer.Simple(i, function()
+			client:SetHealth(math.Clamp(client:Health() + 2, 0, client:GetMaxHealth()))
+		end)
+	end
 end)

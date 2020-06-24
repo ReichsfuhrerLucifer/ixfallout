@@ -13,29 +13,47 @@ ITEM.functions.Drink = {
 	icon = "icon16/drink.png",
 	OnRun = function(item)
 		local client = item.player
-		local thirst = client:GetCharacter():GetData("thirst", 100)
-		local radiation = client:GetCharacter():GetData("radiation", 0)
+		local char = client:GetCharacter()
+		local thirst = char:GetData("thirst", 100)
+		local radiation = char:GetData("radiation", 0)
+		local str = char:GetAttribute("str", 0)
+		local int = char:GetAttribute("int", 0)
 		
-		if (thirst + item.thirst) >= 100 then
-			client:SetThirst(100)
-		elseif item.thirst > 0 then
-			client:SetThirst(thirst + item.thirst)
+		if thirst and item.thirst then
+			client:SetThirst(math.Clamp(thirst + item.thirst, 0, 100))
+		end
+
+		if radiation and item.radiation then
+			client:SetRadiation(math.Clamp(radiation + item.radiation, 0, 100))
 		end
 		
-		if (radiation + item.radiation) >= 100 then
-			client:SetRadiation(100)
-		elseif item.thirst > 0 then
-			client:SetRadiation(radiation + item.radiation)
-		end
-		
-		client:GetCharacter():SetData("drunk", client:GetCharacter():GetData("drunk") + item.force)
-		
+		char:SetData("drunk", char:GetData("drunk") + item.force)
 		client:EmitSound( "npc/barnacle/barnacle_gulp2.wav" )
 		hook.Run("Drunk", client)
 		
 		if item.empty then
-			local inv = client:GetCharacter():GetInventory()
+			local inv = char:GetInventory()
 			inv:Add(item.empty)
+		end
+
+		if str then
+			char:SetAttrib("str", math.max(0, str + 1))
+
+			timer.Simple(120, function()
+				str = char:GetAttribute("str", 0)
+
+				client:GetCharacter():SetAttrib("str", math.max(0, str - 1))
+			end)
+		end
+
+		if int then
+			char:SetAttrib("int", math.max(0, int - 1))
+
+			timer.Simple(120, function()
+				int = char:GetAttribute("int", 0)
+
+				client:GetCharacter():SetAttrib("int", math.max(0, int + 1))
+			end)
 		end
 	end
 }

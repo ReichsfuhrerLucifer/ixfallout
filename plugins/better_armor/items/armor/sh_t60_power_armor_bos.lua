@@ -27,22 +27,6 @@ ITEM.replacements = "models/adi/t601_lyonspride_pm.mdl"
 
 ITEM.maxDurability = 2430
 
-ITEM:Hook("Equip", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	
-	char:SetAttrib("str", math.max(str + 2, 0))
-
-	-- client:SetModelScale(client:GetModelScale() * 1.1, 0)
-end)
-
-ITEM:Hook("EquipUn", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	
-	char:SetAttrib("str", math.max(str - 2, 0))
-
-	-- client:SetModelScale(1, 0)
-end)
+ITEM.attribBoosts = {
+	["str"] = 2,
+}

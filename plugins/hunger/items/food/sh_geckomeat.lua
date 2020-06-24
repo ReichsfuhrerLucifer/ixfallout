@@ -9,5 +9,20 @@ ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("npc/barnacle/barnacle_gulp2.wav")
-	client:SetHealth(math.min(client:Health() + 5, client:GetMaxHealth()))
+	
+	for i = 1, 5 do
+		timer.Simple(i, function()
+			client:SetHealth(math.Clamp(client:Health() + 1, 0, client:GetMaxHealth()))
+		end)
+	end
+
+	local str = client:GetCharacter():GetAttribute("str", 0)
+
+	client:GetCharacter():SetAttrib("str", math.max(0, str - 1))
+
+	timer.Simple(120, function()
+		str = client:GetCharacter():GetAttribute("str", 0)
+
+		client:GetCharacter():SetAttrib("str", math.max(0, str + 1))
+	end)
 end)

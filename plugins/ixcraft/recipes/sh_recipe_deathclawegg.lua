@@ -1,5 +1,5 @@
 
-RECIPE.name = "Deathclaw omelette"
+RECIPE.name = "Deathclaw egg omelette"
 RECIPE.description = "recipeDeathclawOmeletteDesc"
 RECIPE.model = "models/mosi/fallout4/props/food/deathclawomelette.mdl"
 RECIPE.requirements = {

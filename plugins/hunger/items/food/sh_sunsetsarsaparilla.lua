@@ -2,15 +2,20 @@ ITEM.name = "Sunset Sarsaparilla"
 ITEM.model = "models/mosi/fallout4/props/drink/sunsetsarsaparilla.mdl"
 ITEM.description = "itemSunsetSarsaparillaDesc"
 ITEM.price = 3
-ITEM.thirst = 25
+ITEM.thirst = 10
 ITEM.empty = "sunsetsarsaparilla_bottle"
 
 ITEM:Hook("Eat", function(item)
 	local client = item.player
 	
 	client:EmitSound("ui/drink.wav")
-	client:SetHealth(math.min(client:Health() + 5, client:GetMaxHealth()))
 	client:RestoreStamina(10)
+
+	for i = 1, 25 do
+		timer.Simple(i, function()
+			client:SetHealth(math.Clamp(client:Health() + 2, 0, client:GetMaxHealth()))
+		end)
+	end
 
 	local per = math.random(0, 100)
 

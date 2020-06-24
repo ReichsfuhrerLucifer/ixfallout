@@ -27,22 +27,7 @@ ITEM.replacements = "models/player/enclave/hub/enclave_trooper.mdl"
 
 ITEM.maxDurability = 1275
 
-ITEM:Hook("Equip", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	local stm = char:GetAttribute("stm", 0)
-	
-	char:SetAttrib("str", math.max(str + 1, 0))
-	char:SetAttrib("stm", math.max(stm - 1, 0))
-end)
-
-ITEM:Hook("EquipUn", function(item)
-	local client = item.player
-	local char = client:GetCharacter()
-	local str = char:GetAttribute("str", 0)
-	local stm = char:GetAttribute("stm", 0)
-	
-	char:SetAttrib("str", math.max(str - 1, 0))
-	char:SetAttrib("stm", math.max(stm + 1, 0))
-end)
+ITEM.attribBoosts = {
+	["str"] = 2,
+	["stm"] = -1,
+}
