@@ -225,11 +225,17 @@ if (SERVER) then
 				end
 			end
 			
-			timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
+			if client:Alive() then
 				for j, name in pairs(itemNames) do
 					client:NotifyLocalized("itemLost", name)
 				end
-			end)
+			else
+				-- timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
+					for j, name in pairs(itemNames) do
+						client:NotifyLocalized("itemLost", name)
+					end
+				-- end)
+			end
 		end
 		
 		if (ix.config.Get("dropMoneyOnDeath", false) and !client:IsAdmin()) then
@@ -239,9 +245,10 @@ if (SERVER) then
 				client:GetCharacter():TakeMoney(amount)
 				ix.currency.Spawn(client:GetPos() + Vector( math.Rand(-8,8), math.Rand(-8,8), 5), amount)
 				
-				timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
-					client:NotifyLocalized( "moneyLost", ix.currency.Get(amount) )
-				end)
+					-- timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
+						client:NotifyLocalized( "moneyLost", ix.currency.Get(amount) )
+					-- end)
+				end
 			end
 		end
 	end

@@ -1,6 +1,6 @@
 
 RECIPE.name = "Brahmin steak"
-RECIPE.description = "Cook a Brahmin steak."
+RECIPE.description = "recipeBrahminSteakDesc"
 RECIPE.model = "models/mosi/fallout4/props/food/steak.mdl"
 RECIPE.requirements = {
 	["brahminmeat"] = 1

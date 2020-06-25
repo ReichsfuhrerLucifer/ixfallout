@@ -1,4 +1,4 @@
 
 STATION.name = "Chemistry station"
-STATION.description = "A workstation used for chemistry."
+STATION.description = "stationChemistryStationDesc"
 STATION.model = "models/mosi/fallout4/furniture/workstations/chemistrystation01.mdl"

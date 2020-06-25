@@ -12,4 +12,9 @@ LANGUAGE = {
 	["cmdCraftRecipe"] = "Attempt to craft a recipe.",
 
 	["noWorkbench"] = "You need to be near a workbench.",
+
+	stationChemistryStationDesc = "A workstation used for chemistry.",
+	stationCookingStationDesc = "A station used for cooking.",
+	stationWeaponsWorkbenchDesc = "A workbench used for scrapping and building weapon mods using parts from a variety of weapons.",
+	stationWorkbenchDesc = "A workbench used for crafting.",
 }
