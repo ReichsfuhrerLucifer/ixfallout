@@ -2,6 +2,7 @@ PLUGIN.name = "Legs wyjebnik"
 PLUGIN.author = "Lechu2375"
 PLUGIN.description = "Now hitting right in the legs causes injures."
 PLUGIN.license =  "MIT not for use on Kaktusownia opensource.org/licenses/MIT"
+
 if SERVER then
     local legs = {
         [HITGROUP_LEFTLEG] = true,
@@ -19,8 +20,8 @@ if SERVER then
 
     }--fill this table
 
-    function PLUGIN:ScalePlayerDamage(ply,hitgroup,dmginfo )
-        local char = ply:GetCharacter()
+    function PLUGIN:ScalePlayerDamage(client, hitgroup, dmginfo)
+        local char = client:GetCharacter()
         local inv = char:GetInventory()
         local items = inv:GetItems()
         local lck = char:GetAttribute("lck", 0)
@@ -36,7 +37,7 @@ if SERVER then
                         local durability = v:GetData("Durability", 100)
 
                         if (durability > 0) then
-                            return end
+                            return
                         end
                     end
                 end
@@ -54,11 +55,7 @@ if SERVER then
                 end
 
                 if (chance <= 40) then
-                    ply:SetRagdolled(true, 10)
-
-                    /*else // negotiable, I havent tested this.
-                    char:AddBoost("legShoot","stm",-50)   
-                    char:AddBoost("legShoot","stamina",-60)  */   
+                    client:SetRagdolled(true, 10)
                 end
             end
         end

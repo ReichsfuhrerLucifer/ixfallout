@@ -1,23 +1,33 @@
 local PLUGIN = PLUGIN
 local font = ix.config.Get("font")
-surface.CreateFont( "Ix_NPCChatName",
+surface.CreateFont( "ixNPCChatNameFont",
 {
 	font = font,
 	size = ScreenScale( 8 ),
 	weight = 1000,
+	extended = true,
 })
-surface.CreateFont( "Ix_NPCChatSel",
+surface.CreateFont( "ixNPCChatSelFont",
 {
 	font = font,
 	size = ScreenScale( 6 ),
 	weight = 1000,
+	extended = true,
 })
-surface.CreateFont( "Ix_NPCChatText",
+surface.CreateFont( "ixNPCChatTextFont",
 {
 	font = font,
 	size = ScreenScale( 6 ),
 	weight = 500,
+	extended = true,
 })
+surface.CreateFont("ixScoreTeamFont", {
+		font = font,
+		size = 16,
+		weight = 500,
+		antialias = true,
+		extended = true,
+	})
 local color_red = Color(255,0,0)
 local color_white = Color(255,255,255)
 local color_black = Color(0,0,0)
@@ -33,7 +43,7 @@ if CLIENT then
 	local PANEL = {}
 	function PANEL:Init()
 		local sh = ScrH()/1.5
-		self:SetTitle( "Dialogue" )
+		self:SetTitle( L"Dialogue" )
 		self:SetSize( sh*.8, sh )
 		self.content = vgui.Create( "Panel", self )
 		self.content:Dock( FILL )
@@ -64,7 +74,7 @@ if CLIENT then
 	function PANEL:AddSelection( tbl )
 		for k, v in pairs( tbl ) do
 			local btn = self.sdialouge:Add( "DButton" )
-			btn:SetFont( "Ix_NPCChatSel" )
+			btn:SetFont( "ixNPCChatSelFont" )
 			btn:SetTextColor( color_white )
 			btn:SetText(v )
 			btn:DockMargin(0, 0, 0, 0)
@@ -92,7 +102,7 @@ if CLIENT then
 	end
 	function PANEL:AddName( str )
 		local lab = self.dialouge:Add( "DLabel" )
-		lab:SetFont( "Ix_NPCChatName" )
+		lab:SetFont( "ixNPCChatNameFont" )
 		lab:SetTextColor( color_white )
 		lab:SetText(str )
 		lab:SizeToContents()
@@ -102,7 +112,7 @@ if CLIENT then
 	function PANEL:AddText( str )
 		local lab = self.dialouge:Add( "DLabel" )
 		lab:SetTextColor( color_white )
-		lab:SetFont( "Ix_NPCChatText" )
+		lab:SetFont( "ixNPCChatTextFont" )
 		lab:SetText( str )
 		lab:SetWrap( true )
 		lab:DockMargin(10, 0, 3, 5)
@@ -112,7 +122,7 @@ if CLIENT then
 	function PANEL:AddCustomText( str, font, color )
 		local lab = self.dialouge:Add( "DLabel" )
 		lab:SetTextColor( color or color_white )
-		lab:SetFont( font or "Ix_NPCChatText" )
+		lab:SetFont( font or "ixNPCChatTextFont" )
 		lab:SetText( str )
 		lab:SetWrap( true )
 		lab:DockMargin(10, 0, 3, 5)
@@ -123,7 +133,7 @@ if CLIENT then
 		self:AddName( str1 )
 		self:AddText( str2 )
 	end
-	vgui.Register( "Ix_Dialogue", PANEL, "DFrame" )
+	vgui.Register( "ixDialogue", PANEL, "DFrame" )
 end
 
 /*---------------------------------------------------------
@@ -164,7 +174,7 @@ function PANEL:SetEntity( entity )
 		npcd:DockMargin(3, 3, 3, 3)
 		npcd:Dock(TOP)
 		npcd:SetTextColor(color_white)
-		npcd:SetFont("ix_ScoreTeamFont")
+		npcd:SetFont("ixScoreTeamFont")
 		npcd:SizeToContents()
 		self.npcd = self.scroll:Add( "DListView" )
 		self.npcd:SetPos( 0, 0 )
@@ -204,7 +214,7 @@ function PANEL:SetEntity( entity )
 		playerd:DockMargin(3, 3, 3, 3)
 		playerd:Dock(TOP)
 		playerd:SetTextColor(color_white)
-		playerd:SetFont("ix_ScoreTeamFont")
+		playerd:SetFont("ixScoreTeamFont")
 		playerd:SizeToContents()
 		self.plyd = self.scroll:Add( "DListView" )
 		self.plyd:SetPos( 0, 0 )
@@ -255,7 +265,7 @@ function PANEL:SetEntity( entity )
 		faction:DockMargin(3, 3, 3, 3)
 		faction:Dock(TOP)
 		faction:SetTextColor(color_white)
-		faction:SetFont("ix_ScoreTeamFont")
+		faction:SetFont("ixScoreTeamFont")
 		faction:SizeToContents()
 		local factionData = entity:GetNetVar("factiondata", {})
 		for k, v in SortedPairs(ix.faction.teams) do
@@ -275,7 +285,7 @@ function PANEL:SetEntity( entity )
 		classes:DockMargin(3, 3, 3, 3)
 		classes:Dock(TOP)
 		classes:SetTextColor(color_white)
-		classes:SetFont("ix_ScoreTeamFont")
+		classes:SetFont("ixScoreTeamFont")
 		classes:SizeToContents()
 		self.classes = {}
 		local classData = entity:GetNetVar("classdata", {})
@@ -296,7 +306,7 @@ function PANEL:SetEntity( entity )
 		name:DockMargin(3, 3, 3, 3)
 		name:Dock(TOP)
 		name:SetTextColor(color_white)
-		name:SetFont("ix_ScoreTeamFont")
+		name:SetFont("ixScoreTeamFont")
 		name:SizeToContents()
 		self.name = self.scroll:Add("DTextEntry")
 		self.name:Dock(TOP)
@@ -308,7 +318,7 @@ function PANEL:SetEntity( entity )
 		description:DockMargin(3, 3, 3, 3)
 		description:Dock(TOP)
 		description:SetTextColor(color_white)
-		description:SetFont("ix_ScoreTeamFont")
+		description:SetFont("ixScoreTeamFont")
 		description:SizeToContents()
 		self.description = self.scroll:Add("DTextEntry")
 		self.description:Dock(TOP)
@@ -320,7 +330,7 @@ function PANEL:SetEntity( entity )
 		model:DockMargin(3, 3, 3, 3)
 		model:Dock(TOP)
 		model:SetTextColor(Color(60, 60, 60))
-		model:SetFont("ix_ScoreTeamFont")
+		model:SetFont("ixScoreTeamFont")
 		model:SizeToContents()
 		self.model = self.scroll:Add("DTextEntry")
 		self.model:Dock(TOP)
@@ -365,7 +375,7 @@ function PANEL:SetEntity( entity )
 			end
 		end
 end
-vgui.Register( "Ix_DialogueEditor", PANEL, "DFrame" )
+vgui.Register( "ixDialogueEditor", PANEL, "DFrame" )
 
 
 function PLUGIN:ShouldDrawTargetEntity(entity)
@@ -380,7 +390,7 @@ function PLUGIN:DrawTargetID(entity, x, y, alpha)
 		local color = Color(mainColor.r, mainColor.g, mainColor.b, alpha)
 
 		ix.util.DrawText(x, y, entity:GetNetVar("name", "John Doe"), color)
-			y = y + 1.7
-		ix.util.DrawText(x, y, entity:GetNetVar("description", "No description.")), Color(255, 255, 255, alpha), "ix_TargetFontSmall")
+			y = y + 0.75
+		ix.util.DrawText(x, y, entity:GetNetVar("description", "No description."), Color(255, 255, 255, alpha), "ix_TargetFontSmall")
 	end
 end

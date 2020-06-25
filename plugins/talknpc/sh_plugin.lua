@@ -14,6 +14,10 @@ PLUGIN.defaultDialogue = {
 	},
 }
 
+ix.lang.AddTable("korean", {
+	["Dialogue"] = "대화창",
+})
+
 if (SERVER) then
 	local PLUGIN = PLUGIN
 	
@@ -43,13 +47,20 @@ if (SERVER) then
 	end
 
 	function PLUGIN:LoadData()
-		for k, v in ipairs(self:getData() or {}) do
+		for k, v in ipairs(self:GetData() or {}) do
 			local entity = ents.Create("ix_talker")
 			entity:SetPos(v.pos)
 			entity:SetAngles(v.angles)
 			entity:Spawn()
 			entity:SetModel(v.model)
 			entity:SetSkin(v.skin)
+
+			local physObj = entity:GetPhysicsObject()
+
+			if (IsValid(physObj)) then
+				physObj:EnableMotion(false)
+				physObj:Sleep()
+			end
 
 			for id, bodygroup in pairs(v.bodygroups or {}) do
 				entity:SetBodygroup(id, bodygroup)

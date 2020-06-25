@@ -1,8 +1,16 @@
+
 ENT.Type = "anim"
 ENT.PrintName = "Talker"
 ENT.Category = "Helix"
 ENT.Spawnable = true
 ENT.AdminOnly = true
+ENT.bNoPersist = true
+
+function ENT:SetupDataTables()
+	self:NetworkVar("Bool", 0, "NoBubble")
+	self:NetworkVar("String", 0, "DisplayName")
+	self:NetworkVar("String", 1, "Description")
+end
 
 function ENT:Initialize()
 	if (SERVER) then
@@ -114,7 +122,7 @@ if (CLIENT) then
 			ix.gui.dialogue:Remove()
 			return
 		end
-		ix.gui.dialogue = vgui.Create("Ix_Dialogue")
+		ix.gui.dialogue = vgui.Create("ixDialogue")
 		ix.gui.dialogue:Center()
 		ix.gui.dialogue:SetEntity(data)
 if LocalPlayer():IsAdmin() then
@@ -122,7 +130,7 @@ if LocalPlayer():IsAdmin() then
 			ix.gui.dialogue:Remove()
 			return
 		end
-		ix.gui.edialogue = vgui.Create("Ix_DialogueEditor")
+		ix.gui.edialogue = vgui.Create("ixDialogueEditor")
 		--ix.gui.edialogue:Center()
 		ix.gui.edialogue:SetEntity(data)
 end
@@ -133,17 +141,20 @@ end
 	local drawText = ix.util.DrawText
 	local configGet = ix.config.Get
 
-	ENT.DrawEntityInfo = true
+	ENT.PopulateEntityInfo = true
 
-	function ENT:OnDrawEntityInfo(alpha)
-		local position = toScreen(self.LocalToWorld(self, self.OBBCenter(self)) + TEXT_OFFSET)
-		local x, y = position.x, position.y
-		local description = self.GetNetVar(self, "description")
+	function ENT:OnPopulateEntityInfo(container)
+		local name = container:AddRow("name")
+		name:SetImportant()
+		name:SetText(self.GetNetVar(self, "name", "John Doe"))
+		name:SizeToContents()
 
-		drawText(self.GetNetVar(self, "name", "John Doe"), x, y, colorAlpha(configGet("color"), alpha), 1, 1, nil, alpha * 0.65)
+		local descriptionText = self.GetNetVar(self, "description")
 
-		if (description) then
-			drawText(description, x, y + 16, colorAlpha(color_white, alpha), 1, 1, "ixSmallFont", alpha * 0.65)
+		if (descriptionText != "") then
+			local description = container:AddRow("description")
+			description:SetText(self.GetNetVar(self, "description"))
+			description:SizeToContents()
 		end
 	end
 else
