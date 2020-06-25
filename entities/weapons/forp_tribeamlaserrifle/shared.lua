@@ -58,8 +58,9 @@ local LaserHitImpact = function(attacker, tr, dmginfo)
 	return true
 end
 
-
-SWEP.PrintName = "트라이빔 레이저 소총"
+if CLIENT then
+SWEP.PrintName = L"Tri-beam laser rifle"
+end
     
 SWEP.Author = "Karltroid51"
 SWEP.Contact = ""
@@ -106,12 +107,14 @@ SWEP.DrawAmmo = true
 SWEP.Base = "weapon_stef_base"
 
 SWEP.Primary.Sound = Sound("weapon_laserrifle1.ogg") 
-SWEP.Primary.Damage = 22
+-- SWEP.Primary.Damage = 22
+SWEP.Primary.Damage = 25
 SWEP.Primary.NumShots = 3
 SWEP.Primary.ClipSize = 24
 SWEP.Primary.Ammo = "MicrofusionCell"
 SWEP.Primary.DefaultClip = 0
-SWEP.Primary.Cone = 0.05
+-- SWEP.Primary.Cone = 0.05
+SWEP.Primary.Cone = 0.02
 SWEP.Primary.Automatic = false
 SWEP.Primary.Delay = 0.35
 

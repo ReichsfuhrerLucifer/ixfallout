@@ -2,7 +2,9 @@
 Created with buu342s Swep Creator
 ---------------------------------*/
 
-SWEP.PrintName = "충전식 소총"
+if CLIENT then
+	SWEP.PrintName = L"Recharger rifle"
+end
     
 SWEP.Author = "Karltroid51"
 SWEP.Contact = ""

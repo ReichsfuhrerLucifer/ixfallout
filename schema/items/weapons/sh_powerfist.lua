@@ -1,8 +1,9 @@
-ITEM.name = "파워 피스트"
-ITEM.description = "수압 피스톤이 부착되어 피격 대상을 강하게 쳐내는 기계식 글러브입니다."
+ITEM.name = "Power fist"
+ITEM.description = "itemPowerFistDesc"
 ITEM.class = "forp_powerfist"
 ITEM.weaponCategory = "melee"
-ITEM.price = 800
+-- ITEM.price = 800
+ITEM.price = 100
 ITEM.model = "models/mosi/fallout4/props/weapons/melee/powerfist.mdl"
 ITEM.width = 1
 ITEM.height = 2
@@ -13,4 +14,5 @@ ITEM.iconCam = {
 }
 ITEM.exRender = true
 
-ITEM.maxDurability = 800
+-- ITEM.maxDurability = 800
+ITEM.maxDurability = 5000

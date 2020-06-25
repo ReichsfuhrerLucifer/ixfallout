@@ -5,6 +5,7 @@ ITEM.category = "Books"
 ITEM.model = "models/weapons/w_pistol.mdl"
 ITEM.width = 1
 ITEM.height = 1
+ITEM.price = 100
 ITEM.skill = "strength"
 ITEM.skillAmount = 1
 

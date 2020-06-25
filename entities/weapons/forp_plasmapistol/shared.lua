@@ -103,9 +103,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 		= Sound("weapons/pistolplasma/wpn_pistolplasma.wav")
 SWEP.Primary.Recoil			= .15
-SWEP.Primary.Damage		= 33
+-- SWEP.Primary.Damage		= 33
+SWEP.Primary.Damage		= 25
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone 			= .001
+-- SWEP.Primary.Cone 			= .001
+SWEP.Primary.Cone 			= .005
 SWEP.Primary.Delay 		= 0.5
 
 SWEP.Primary.ClipSize		= 32					// Size of a clip

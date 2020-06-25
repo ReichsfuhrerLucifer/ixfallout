@@ -1,5 +1,5 @@
-ITEM.name = "버민트 소총"
-ITEM.description = "유해 조수를 사냥하기 위해 주로 쓰이던 소총으로, 대전쟁 전 미국의 제식 소총탄이었던 5.56mm 소총탄을 사용합니다."
+ITEM.name = "Varmint rifle"
+ITEM.description = "itemVarmintRifleDesc"
 ITEM.class = "forp_varmintrifle"
 ITEM.weaponCategory = "primary"
 ITEM.price = 75

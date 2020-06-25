@@ -1,5 +1,5 @@
-ITEM.name = "파이프 렌치"
-ITEM.description = "파이프렌치는 개구스패너의 일종입니다. 몽키렌치와 구조가 매우 유사하며, 그냥 몽키렌치라고 부르기도 합니다."
+ITEM.name = "Wrench"
+ITEM.description = "itemWrenchDesc"
 ITEM.class = "forp_pipewrench"
 ITEM.weaponCategory = "melee"
 ITEM.price = 30

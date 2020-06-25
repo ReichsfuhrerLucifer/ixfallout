@@ -105,7 +105,8 @@ SWEP.EjectDelay				= 0
 
 SWEP.Primary.Sound 		= Sound("weapons/plasmarifle/wpn_rifleplasma.wav")
 SWEP.Primary.Recoil		= .1
-SWEP.Primary.Damage		= 47
+-- SWEP.Primary.Damage		= 47
+SWEP.Primary.Damage		= 45
 SWEP.Primary.NumShots		= 1
 SWEP.Primary.Cone 			= .02
 SWEP.Primary.Delay 		= 0.50

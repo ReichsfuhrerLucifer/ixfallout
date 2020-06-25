@@ -1,5 +1,5 @@
-ITEM.name = "제식 소총\n(리플렉스 사이트)"
-ITEM.description = "뉴 캘리포니아 공화국 군대가 제식으로 사용하는 반자동 소총으로, 대전쟁 전 미국의 제식 소총탄이었던 5.56mm 소총탄을 사용합니다.\n리플렉스 사이트가 달려 있습니다."
+ITEM.name = "Service rifle"
+ITEM.description = "itemServiceRifleReflexDesc"
 ITEM.class = "forp_servicerifle_reflex"
 ITEM.weaponCategory = "primary"
 ITEM.price = 1390

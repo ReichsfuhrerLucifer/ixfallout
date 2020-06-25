@@ -138,9 +138,11 @@ SWEP.ViewModelBoneMods = {
 
 SWEP.Primary.Sound 			= Sound("weapons/minigun/wpn_minigun_fire.wav")
 SWEP.Primary.Recoil			= .4
-SWEP.Primary.Damage			= 12
+-- SWEP.Primary.Damage			= 12
+SWEP.Primary.Damage			= 5
 SWEP.Primary.NumShots		= 1
-SWEP.Primary.Cone			= 0.1
+-- SWEP.Primary.Cone			= 0.1
+SWEP.Primary.Cone			= 0.2
 SWEP.Primary.Delay 			= 0.04
 
 SWEP.Primary.ClipSize		= 240					// Size of a clip

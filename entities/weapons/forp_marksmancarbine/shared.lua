@@ -7,7 +7,9 @@ if (CLIENT) then
 	}
 end
 
-SWEP.PrintName			= "지정 사수 소총"					// 'Nice' Weapon name (Shown on HUD)	
+if CLIENT then
+	SWEP.PrintName			= L"Marksman carbine"					// 'Nice' Weapon name (Shown on HUD)
+end
 SWEP.Base 				= "boh_scoped_base"
 SWEP.Category			= "Fallout RP"
 SWEP.Spawnable			= true

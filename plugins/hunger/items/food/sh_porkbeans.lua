@@ -5,6 +5,7 @@ ITEM.price = 5
 ITEM.hunger = 40
 ITEM.thirst = -20
 ITEM.radiation = 3
+ITEM.empty = "tincan"
 
 ITEM:Hook("Eat", function(item)
 	local client = item.player

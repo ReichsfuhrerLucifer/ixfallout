@@ -4,6 +4,7 @@ ITEM.description = "itemDogFoodDesc"
 ITEM.price = 5
 ITEM.hunger = 10
 ITEM.radiation = 2
+ITEM.empty = "tincan"
 
 ITEM:Hook("Eat", function(item)
 	local client = item.player

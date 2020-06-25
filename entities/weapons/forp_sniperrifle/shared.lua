@@ -7,7 +7,9 @@ SWEP.WElements = {
 }
 end
 
-SWEP.PrintName			= "저격 소총"					// 'Nice' Weapon name (Shown on HUD)	
+if CLIENT then
+SWEP.PrintName			= "Sniper rifle"					// 'Nice' Weapon name (Shown on HUD)
+end
 SWEP.Base 				= "boh_scoped_base"
 SWEP.Category			= "Fallout RP"
 SWEP.Spawnable			= true
@@ -50,9 +52,12 @@ SWEP.data.ironsights			= 1
 SWEP.ScopeScale 				= 0.7
 
 SWEP.Primary.NumShots			= 1		--how many bullets to shoot per trigger pull
-SWEP.Primary.Damage				= 45	--base damage per bullet
-SWEP.Primary.Spread				= .02	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
-SWEP.Primary.IronAccuracy 		= .002 -- ironsight accuracy, should be the same for shotguns
+-- SWEP.Primary.Damage				= 45	--base damage per bullet
+SWEP.Primary.Damage				= 40	--base damage per bullet
+-- SWEP.Primary.Spread				= .02	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
+SWEP.Primary.Spread				= 0	--define from-the-hip accuracy 1 is terrible, .0001 is exact)
+-- SWEP.Primary.IronAccuracy 		= .002 -- ironsight accuracy, should be the same for shotguns
+SWEP.Primary.IronAccuracy 		= 0 -- ironsight accuracy, should be the same for shotguns
 
 -- enter iron sight info and bone mod info below
 

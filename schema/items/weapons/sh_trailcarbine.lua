@@ -1,5 +1,5 @@
-ITEM.name = "트레일 카빈"
-ITEM.description = ".44 매그넘 권총탄을 사용하는 레버 액션 소총입니다."
+ITEM.name = "Trail carbine"
+ITEM.description = "itemTrailCarbineDesc"
 ITEM.class = "forp_trailcarbine"
 ITEM.weaponCategory = "primary"
 ITEM.price = 3900

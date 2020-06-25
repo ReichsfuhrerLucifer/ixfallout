@@ -1,5 +1,5 @@
-ITEM.name = "단발 산탄총"
-ITEM.description = "한 발의 산탄을 장전할 수 있는 20 게이지 산탄총입니다."
+ITEM.name = "Single shotgun"
+ITEM.description = "itemSingleShotgunDesc"
 ITEM.class = "forp_singleshotgun"
 ITEM.weaponCategory = "primary"
 ITEM.price = 175
