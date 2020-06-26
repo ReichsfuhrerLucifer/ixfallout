@@ -11,7 +11,7 @@ ix.lang.AddTable("korean", {
 	advertiseMoneyLow = "광고를 하기 위해 필요한 최소 자금(%s)이 없습니다.",
 })
 
-ix.chat.Register("advert", {
+ix.chat.Register("Advert", {
 	CanSay =  function(self, speaker, text)
 		if speaker:GetCharacter() and speaker:GetCharacter():HasMoney(100) then
 				speaker:GetCharacter():TakeMoney(100)
@@ -25,6 +25,6 @@ ix.chat.Register("advert", {
 	OnChatAdd = function(self, speaker, text)
 		chat.AddText(Color(255, 94, 0), "[AD] ", Color(166, 166, 166), text)
 	end,
-	prefix = {"/advertisement", "/advert", "/ad"},
+	prefix = {"/Advertisement", "/Advert", "/Ad"},
 	noSpaceAfter = true
 })

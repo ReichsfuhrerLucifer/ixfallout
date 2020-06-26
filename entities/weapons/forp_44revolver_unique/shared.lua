@@ -3,13 +3,13 @@ Created with buu342s Swep Creator
 ---------------------------------*/
 
 if CLIENT then
-SWEP.PrintName = L"Mysterious Stranger's .44 Magnum"
+SWEP.PrintName = L("Mysterious Stranger's .44 Magnum")
+SWEP.Instructions = L("item44RevolverDesc")
 end
     
 SWEP.Author = "Karltroid51"
 SWEP.Contact = ""
 SWEP.Purpose = ""
-SWEP.Instructions = ""
 
 SWEP.Category = "Fallout RP"
 

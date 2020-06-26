@@ -20,27 +20,27 @@ ix.lang.AddTable("korean", {
 
 if (SERVER) then
 	local PLUGIN = PLUGIN
-	
+
 	function PLUGIN:SaveData()
 		local data = {}
-			for k, v in ipairs(ents.FindByClass("ix_talker")) do
+			for _, entity in ipairs(ents.FindByClass("ix_talker")) do
 				local bodygroups = {}
 
-				for _, v2 in ipairs(entity:GetBodyGroups() or {}) do
-					bodygroups[v2.id] = entity:GetBodygroup(v2.id)
+				for _, v in ipairs(entity:GetBodyGroups() or {}) do
+					bodygroups[v.id] = entity:GetBodygroup(v.id)
 				end
 
 				data[#data + 1] = {
-					name = v:GetNetVar("name"),
-					description = v:GetNetVar("description"),
-					pos = v:GetPos(),
-					angles = v:GetAngles(),
-					model = v:GetModel(),
-					skin = v:GetSkin(),
+					name = entity:GetNetVar("name"),
+					description = entity:GetNetVar("description"),
+					pos = entity:GetPos(),
+					angles = entity:GetAngles(),
+					model = entity:GetModel(),
+					skin = entity:GetSkin(),
 					bodygroups = bodygroups,
-					factions = v:GetNetVar("factiondata", {}),
-					dialogue = v:GetNetVar( "dialogue", self.defaultDialogue ),
-					classes = v:GetNetVar("classdata", {})
+					factions = entity:GetNetVar("factiondata", {}),
+					dialogue = entity:GetNetVar( "dialogue", self.defaultDialogue ),
+					classes = entity:GetNetVar("classdata", {})
 				}
 			end
 		self:SetData(data)

@@ -56,7 +56,7 @@ function PLUGIN:DoPlayerDeath(victim, ent, dmg)
         else end
     end
 
-    if IsValid(ent) and ent:IsPlayer() and ix.config.Get("PlayerKillAmount") > 0 and money > 0 then
+    if IsValid(ent) and ent:IsPlayer() and ix.config.Get("PlayerKillAmount") > 0 and money > 0 and (ent != victim) then
         local char = ent:GetCharacter()
         char:GiveMoney(money)
         char.player:NotifyLocalized("MoneyKillEarned", ix.currency.Get(money))

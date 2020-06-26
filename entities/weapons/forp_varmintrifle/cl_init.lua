@@ -1,6 +1,7 @@
 include('shared.lua')
 
-SWEP.PrintName			= L"Varmint rifle"				// 'Nice' Weapon name (Shown on HUD)	
+SWEP.PrintName			= L("Varmint rifle")		// 'Nice' Weapon name (Shown on HUD)	
+SWEP.Instructions		= L("itemVarmintRifleDesc")	// 'Nice' Weapon instructions (Shown on HUD)	
 SWEP.Slot				= 3							// Slot in the weapon selection menu
 SWEP.SlotPos			= 1							// Position in the slot
 

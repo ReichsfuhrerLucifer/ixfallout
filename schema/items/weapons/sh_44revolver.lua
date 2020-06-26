@@ -1,5 +1,5 @@
 ITEM.name = ".44 Magnum revolver"
-ITEM.description = "item44Revolver"
+ITEM.description = "item44RevolverDesc"
 ITEM.class = "forp_44revolver"
 ITEM.weaponCategory = "sidearm"
 ITEM.price = 2500

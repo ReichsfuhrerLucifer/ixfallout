@@ -248,7 +248,7 @@ if (SERVER) then
 					-- timer.Simple(ix.config.Get("spawnTime", 5) + 1, function()
 						client:NotifyLocalized( "moneyLost", ix.currency.Get(amount) )
 					-- end)
-				end
+				--end
 			end
 		end
 	end
