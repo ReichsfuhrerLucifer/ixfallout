@@ -4,7 +4,20 @@ PLUGIN.name = "Ambient Sounds"
 PLUGIN.author = "Black Tea, Frosty"
 PLUGIN.description = "Ambient Sounds"
 
+ix.lang.AddTable("english", {
+	optWindVolume = "Set Wind Volume",
+	optdWindVolume = "Set amount volume of the ambient winds.",
+})
+
+ix.lang.AddTable("korean", {
+	optWindVolume = "바람 소리 세기",
+	optdWindVolume = "바람 환경음의 소리 세기를 조절합니다.",
+})
+
 if CLIENT then
+	ix.option.Add("windVolume", ix.type.number, 0.1, {
+		category = "ambient", min = 0, max = 1, decimals = 1
+	})
 
 	PLUGIN.timeData = {}
 	PLUGIN.sndWind = nil
@@ -24,7 +37,7 @@ if CLIENT then
 			if !self.sndWind:IsPlaying() then
 				self.sndWind:Play()
 			end
-			self.sndWind:ChangeVolume( .1, 4 )
+			self.sndWind:ChangeVolume( ix.option.Get("windVolume", 0.1), 4 )
 		else
 			if !self.sndAmbients:IsPlaying() then
 				self.sndAmbients:Play()
