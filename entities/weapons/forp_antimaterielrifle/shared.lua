@@ -8,7 +8,8 @@ SWEP.WElements = {
 end
 
 if CLIENT then
-SWEP.PrintName			= L"Anti-materiel rifle"					// 'Nice' Weapon name (Shown on HUD)
+SWEP.PrintName			= L("Anti-materiel rifle")					// 'Nice' Weapon name (Shown on HUD)
+SWEP.Instructions		= L("itemAntiMaterielRifleDesc")
 end
 SWEP.Base 				= "boh_scoped_base"
 SWEP.Category			= "Fallout RP"

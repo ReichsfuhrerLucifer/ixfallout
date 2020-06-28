@@ -1,8 +1,8 @@
 SWEP.Base = "sword_swepbase"
 
 if CLIENT then
-SWEP.PrintName = L"Baseball bat"
-SWEP.Instructions = L"Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry."
+SWEP.PrintName = L("Baseball bat")
+SWEP.Instructions = L("Primary Fire: Attack.\nSecondary Fire: Guard.\nR: Parry.")
 end
 SWEP.Category = "Fallout RP"
 SWEP.Author = "Barata"
