@@ -8,7 +8,8 @@ SWEP.Instructions				= ""
 SWEP.MuzzleAttachment			= "1" 	-- Should be "1" for CSS models or "muzzle" for hl2 models
 SWEP.ShellEjectAttachment			= "2" 	-- Should be "2" for CSS models or "1" for hl2 models
 if CLIENT then
-SWEP.PrintName				= L"Frag grenade"		-- Weapon name (Shown on HUD)
+SWEP.PrintName				= L("Frag grenade")			-- Weapon name (Shown on HUD)
+SWEP.Instructions			= L("itemFragGrenadeDesc")	-- Weapon instructions (Shown on HUD)
 end
 SWEP.Slot				= 4				-- Slot in the weapon selection menu
 SWEP.SlotPos				= 21			-- Position in the slot

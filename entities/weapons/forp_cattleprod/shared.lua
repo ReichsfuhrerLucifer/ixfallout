@@ -119,7 +119,8 @@ SWEP.WElements = {
 	killicon.AddFont( "weapon_crowbar", 	"HL2MPTypeDeath", 	"6", 	Color( 255, 80, 0, 255 ) )
 end
 if CLIENT then
-SWEP.PrintName			= L"Cattle prod"
+SWEP.PrintName			= L("Cattle prod")
+SWEP.Instructions		= L("itemCattleProdDesc")
 end
 SWEP.Author				= "TiggoRech/Crystal Dynamics/Eidos/Square Enix"
 SWEP.Category			= "Fallout RP"
