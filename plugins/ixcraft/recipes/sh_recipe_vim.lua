@@ -1,6 +1,7 @@
 
 RECIPE.name = "Vim"
 RECIPE.description = "recipeVimDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/drink/vim.mdl"
 RECIPE.requirements = {
 	["corn"] = 1,

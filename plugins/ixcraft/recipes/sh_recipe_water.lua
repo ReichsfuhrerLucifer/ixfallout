@@ -1,6 +1,7 @@
 
 RECIPE.name = "Water"
 RECIPE.description = "recipeWaterDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/drink/water.mdl"
 RECIPE.requirements = {
 	["dirtywater"] = 3

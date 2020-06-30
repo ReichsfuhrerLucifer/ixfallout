@@ -1,6 +1,7 @@
 
 RECIPE.name = "Cram"
 RECIPE.description = "recipeCramDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/cram.mdl"
 RECIPE.requirements = {
 	["cram_irradiated"] = 2

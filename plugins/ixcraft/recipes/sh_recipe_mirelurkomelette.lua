@@ -1,6 +1,7 @@
 
 RECIPE.name = "Mirelurk egg omelette"
 RECIPE.description = "recipeMirelurkOmeletteDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/mirelurkomelette.mdl"
 RECIPE.requirements = {
 	["mirelurkegg"] = 1,

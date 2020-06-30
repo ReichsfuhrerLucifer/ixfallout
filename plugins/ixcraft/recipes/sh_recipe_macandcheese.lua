@@ -1,6 +1,7 @@
 
 RECIPE.name = "BlamCo Mac & Cheese"
 RECIPE.description = "recipeMacAndCheeseDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/macandcheese.mdl"
 RECIPE.requirements = {
 	["macandcheese_irradiated"] = 2

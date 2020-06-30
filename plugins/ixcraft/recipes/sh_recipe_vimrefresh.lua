@@ -1,6 +1,7 @@
 
 RECIPE.name = "Vim Refresh"
 RECIPE.description = "recipeVimRefreshDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/drink/vim.mdl"
 RECIPE.skin = 3
 RECIPE.requirements = {

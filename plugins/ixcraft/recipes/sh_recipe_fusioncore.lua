@@ -1,6 +1,7 @@
 
 RECIPE.name = "Fusion core"
 RECIPE.description = "recipeMicrofusionCellDesc"
+RECIPE.category = "Ammunition"
 RECIPE.model = "models/mosi/fallout4/props/fusion_core.mdl"
 RECIPE.requirements = {
 	["electronchargepack"] = 2

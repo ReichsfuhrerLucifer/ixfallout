@@ -1,6 +1,7 @@
 
 RECIPE.name = "InstaMash"
 RECIPE.description = "recipeInstaMashDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/instamash.mdl"
 RECIPE.requirements = {
 	["instamash_irradiated"] = 2

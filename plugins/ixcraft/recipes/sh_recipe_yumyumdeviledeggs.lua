@@ -1,6 +1,7 @@
 
 RECIPE.name = "YumYum Deviled Eggs"
 RECIPE.description = "recipeYumYumDeviledEggsDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/yumyumdeviledeggs.mdl"
 RECIPE.requirements = {
 	["yumyumdeviledeggs_irradiated"] = 2

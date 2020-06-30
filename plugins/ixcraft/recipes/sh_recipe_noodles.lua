@@ -1,6 +1,7 @@
 
 RECIPE.name = "Noodles"
 RECIPE.description = "recipeNoodlesDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/noodles.mdl"
 RECIPE.requirements = {
 	["razorgrain"] = 1,

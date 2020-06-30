@@ -1,6 +1,7 @@
 
 RECIPE.name = "Electron charge pack"
 RECIPE.description = "recipeElectronChargePackDesc"
+RECIPE.category = "Ammunition"
 RECIPE.model = "models/maxibammo/electronchargepack.mdl"
 RECIPE.requirements = {
 	["microfusioncell"] = 4

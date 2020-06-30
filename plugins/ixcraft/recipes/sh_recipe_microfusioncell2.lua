@@ -1,6 +1,7 @@
 
 RECIPE.name = "Microfusion cell"
 RECIPE.description = "recipeMicrofusionCellDesc"
+RECIPE.category = "Ammunition"
 RECIPE.model = "models/mosi/fallout4/ammo/microfusioncell.mdl"
 RECIPE.requirements = {
 	["electronchargepack"] = 1

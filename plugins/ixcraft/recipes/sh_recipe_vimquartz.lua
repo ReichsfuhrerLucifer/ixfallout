@@ -1,6 +1,7 @@
 
 RECIPE.name = "Vim Quartz"
 RECIPE.description = "recipeVimQuartzDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/drink/vim.mdl"
 RECIPE.skin = 1
 RECIPE.requirements = {

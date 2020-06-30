@@ -1,6 +1,7 @@
 
 RECIPE.name = "Sugar Bombs"
 RECIPE.description = "recipeSugarBombsDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/sugarbombs.mdl"
 RECIPE.requirements = {
 	["sugarbombs_irradiated"] = 2

@@ -1,6 +1,7 @@
 
 RECIPE.name = "Energy cell"
 RECIPE.description = "recipeEnergyCellDesc"
+RECIPE.category = "Ammunition"
 RECIPE.model = "models/maxibammo/energycell.mdl"
 RECIPE.requirements = {
 	["microfusioncell"] = 1

@@ -1,6 +1,7 @@
 
 RECIPE.name = "Bandage"
 RECIPE.description = "recipeBandageDesc"
+RECIPE.category = "Medical"
 RECIPE.model = "models/props_lab/box01a.mdl"
 RECIPE.requirements = {
 	["money"] = 2

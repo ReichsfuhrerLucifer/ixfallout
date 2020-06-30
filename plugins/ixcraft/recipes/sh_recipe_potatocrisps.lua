@@ -1,6 +1,7 @@
 
 RECIPE.name = "Potato Crisps"
 RECIPE.description = "recipePotatoCrispsDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/potatocrisps.mdl"
 RECIPE.requirements = {
 	["potatocrisps_irradiated"] = 2

@@ -1,6 +1,7 @@
 
 RECIPE.name = "Dandy Boy Apples"
 RECIPE.description = "recipeDandyBoyApplesDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/dandyboyapples.mdl"
 RECIPE.requirements = {
 	["dandyboyapples_irradiated"] = 2

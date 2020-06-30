@@ -1,6 +1,7 @@
 
 RECIPE.name = "Salisbury Steak"
 RECIPE.description = "recipeSalisburySteakDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/salisburysteak.mdl"
 RECIPE.requirements = {
 	["salisburysteak_irradiated"] = 2

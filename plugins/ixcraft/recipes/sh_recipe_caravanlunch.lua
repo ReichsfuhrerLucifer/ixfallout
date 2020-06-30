@@ -2,6 +2,7 @@
 RECIPE.name = "Caravan lunch"
 RECIPE.description = "recipeCaravanLunchDesc"
 RECIPE.model = "models/mosi/fallout4/props/food/cram.mdl"
+RECIPE.category = "Food"
 RECIPE.requirements = {
 	["cram"] = 1,
 	["instamash"] = 1,

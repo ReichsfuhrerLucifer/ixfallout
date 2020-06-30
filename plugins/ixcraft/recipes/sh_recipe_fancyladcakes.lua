@@ -1,6 +1,7 @@
 
 RECIPE.name = "Fancy Lads Snack Cakes"
 RECIPE.description = "recipeFancyLadCakesDesc"
+RECIPE.category = "Food"
 RECIPE.model = "models/mosi/fallout4/props/food/fancyladcakes.mdl"
 RECIPE.requirements = {
 	["fancyladcakes_irradiated"] = 2

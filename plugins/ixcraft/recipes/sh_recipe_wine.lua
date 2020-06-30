@@ -1,6 +1,7 @@
 
 RECIPE.name = "Wine"
 RECIPE.description = "recipeWineDesc"
+RECIPE.category = "Alcohol"
 RECIPE.model = "models/mosi/fallout4/props/alcohol/wine.mdl"
 RECIPE.requirements = {
 	["mutfruit"] = 2,
